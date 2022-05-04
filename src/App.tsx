@@ -1,8 +1,11 @@
+import CategoryPage from "./Pages/Category";
+import { StyledApp } from "./Style/App.styled";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Game Guide</h1>
-    </div>
+    <StyledApp>
+      <CategoryPage />
+    </StyledApp>
   );
 }
 
