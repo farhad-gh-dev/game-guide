@@ -5,7 +5,7 @@ import {
   StyledDesktopContainer,
   StyledMobileNavbarContainer,
 } from "./TopBar.styled";
-import { BrandLogo, Navbar, NavbarItem } from "game-guide-ui-kit";
+import { BrandLogo, Navbar, NavbarItem, SearchBar } from "game-guide-ui-kit";
 import CustomerInfo from "./CustomerInfo/CustomerInfo";
 
 const TopBar: React.FC = () => {
@@ -21,6 +21,7 @@ const TopBar: React.FC = () => {
       </StyledDesktopContainer>
 
       <StyledMobileNavbarContainer>
+        <SearchBar />
         <NavbarContent />
       </StyledMobileNavbarContainer>
     </StyledTopBar>

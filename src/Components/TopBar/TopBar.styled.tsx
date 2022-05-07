@@ -41,8 +41,10 @@ export const StyledDesktopContainer = styled.div`
 `;
 
 export const StyledMobileNavbarContainer = styled.div`
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding-top: 30px;
+  padding-right: 5px;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     display: none;
