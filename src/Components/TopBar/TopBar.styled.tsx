@@ -19,6 +19,10 @@ export const StyledTopBarBackground = styled.div`
   width: 100%;
   height: 180px;
   z-index: -1;
+
+  @media (min-width: ${styles.breakpoint.largeScreen}px) {
+    height: 250px;
+  }
 `;
 
 export const StyledDesktopContainer = styled.div`
@@ -37,6 +41,11 @@ export const StyledDesktopContainer = styled.div`
   ul > li {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @media (min-width: ${styles.breakpoint.largeScreen}px) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
   }
 `;
 
