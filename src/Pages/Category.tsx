@@ -5,9 +5,12 @@ import {
   StyledRightPanel,
   StyledLeftPanel,
 } from "../Style/CategoryPage.styled";
+import dummyData from "../DummyData";
 import { TopBar, CategoriesPanel, ItemSlider } from "../Components";
 
 const CategoryPage: React.FC = () => {
+  const { sliderItems } = dummyData;
+
   return (
     <StyledCategoryPage>
       <TopBar />
@@ -16,7 +19,7 @@ const CategoryPage: React.FC = () => {
 
       <StyledPageContentContainer>
         <StyledRightPanel>
-          <ItemSlider />
+          <ItemSlider sliderItems={sliderItems} />
         </StyledRightPanel>
 
         <StyledLeftPanel>
