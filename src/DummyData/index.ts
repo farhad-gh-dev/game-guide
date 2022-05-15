@@ -1,5 +1,9 @@
-import sliderItems from './Slider.data';
+import { sliderItems } from "./Slider.data";
+import { categoryItems } from "./Categories.data";
 
-export default {
-    sliderItems
-}
+const dummyData = {
+  sliderItems,
+  categoryItems,
+};
+
+export default dummyData;

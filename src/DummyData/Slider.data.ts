@@ -14,7 +14,7 @@ import BloodHuntBackgroundImage from "../Assets/Images/bloodhunt_background.jpg"
 import BloodHuntOverlayImage from "../Assets/Images/bloodhunt_overlay.png";
 import BloodHuntTitleImage from "../Assets/Images/bloodhunt_title.png";
 
-const sliderItems = [
+export const sliderItems = [
   {
     id: 1,
     backgroundImageSrc: CyberpunkBackgroundImage,
@@ -55,5 +55,3 @@ const sliderItems = [
     price: 0,
   },
 ];
-
-export default sliderItems;
