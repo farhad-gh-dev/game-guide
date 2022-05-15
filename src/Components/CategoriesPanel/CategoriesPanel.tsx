@@ -42,7 +42,9 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
         <StyledButtonsContainer>
           {categoriesData?.map((i) => (
             <StyledButtonWrapper key={i.id} show={i.showInSmallScreen}>
-              <Button active={i.active}>{i.title}</Button>
+              <Button active={i.active} title={i.title}>
+                {i.title}
+              </Button>
             </StyledButtonWrapper>
           ))}
         </StyledButtonsContainer>

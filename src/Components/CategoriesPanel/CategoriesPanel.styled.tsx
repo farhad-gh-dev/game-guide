@@ -3,7 +3,7 @@ import { styles } from "game-guide-ui-kit";
 
 export const StyledCategoriesPanel = styled.div`
   background-color: ${styles.color.lightest};
-  margin-top: 20px;
+  margin-top: 23px;
   padding: 0 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -11,13 +11,13 @@ export const StyledCategoriesPanel = styled.div`
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     display: flex;
     align-items: stretch;
-    margin-top: 6px;
+    margin-top: 9px;
     padding: 0 30px;
     border-radius: 33px;
   }
 
   @media (min-width: ${styles.breakpoint.largeScreen}px) {
-    margin-top: 12px;
+    margin-top: 15px;
     padding: 0 50px;
     border-radius: 50px;
   }
