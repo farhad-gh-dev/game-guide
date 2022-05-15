@@ -24,14 +24,13 @@ export const StyledPageContentContainer = styled.div`
   }
 `;
 
-export const StyledRightPanel = styled.div`
+export const StyledLeftPanel = styled.div`
   width: 100%;
-  /* background-color: rgba(255, 0, 0, 0.2); */
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     width: 70%;
     padding-right: 20px;
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   @media (min-width: ${styles.breakpoint.largeScreen}px) {
@@ -39,12 +38,40 @@ export const StyledRightPanel = styled.div`
   }
 `;
 
-export const StyledLeftPanel = styled.div`
-  height: 500px;
-  background-color: rgba(43, 0, 255, 0.2);
+export const StyledRightPanel = styled.div`
   width: 100%;
+  margin-bottom: 45px;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     width: 30%;
+    padding-left: 20px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: ${styles.breakpoint.largeScreen}px) {
+    padding-left: 50px;
+    margin-bottom: 60px;
+  }
+`;
+
+export const StyledAllOffersButtonContainer = styled.div`
+  text-align: center;
+
+  .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-icon {
+    margin-left: 5px;
+
+    @media (min-width: ${styles.breakpoint.laptopScreen}px) {
+      margin-left: 7px;
+    }
+
+    @media (min-width: ${styles.breakpoint.largeScreen}px) {
+      margin-left: 10px;
+    }
   }
 `;
