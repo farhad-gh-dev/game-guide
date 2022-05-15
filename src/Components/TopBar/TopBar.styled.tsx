@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { styles } from "game-guide-ui-kit";
 
 export const StyledTopBar = styled.div`
-  position: relative;
+  /* position: relative; */
   color: ${styles.color.lightest};
   padding-top: 25px;
 
@@ -12,7 +12,7 @@ export const StyledTopBar = styled.div`
 `;
 
 export const StyledTopBarBackground = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: ${styles.color.darkest};
