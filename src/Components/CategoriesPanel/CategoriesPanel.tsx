@@ -8,45 +8,26 @@ import {
 } from "./CategoriesPanel.styled";
 import { SearchBar, Button, CustomIcon } from "game-guide-ui-kit";
 
-const buttonsDummyData = [
-  {
-    id: 0,
-    title: "All Games",
-    showInSmallScreen: false,
-  },
-  {
-    id: 1,
-    title: "Mystery",
-    showInSmallScreen: true,
-  },
-  {
-    id: 2,
-    title: "Action",
-    showInSmallScreen: true,
-    active: true,
-  },
-  {
-    id: 3,
-    title: "Strategic",
-    showInSmallScreen: true,
-  },
-  {
-    id: 3,
-    title: "Sports",
-    showInSmallScreen: false,
-  },
-  {
-    id: 3,
-    title: "Competitive",
-    showInSmallScreen: false,
-  },
-];
+export type CategoryItem = {
+  id?: number;
+  title?: string;
+  showInSmallScreen?: boolean;
+  active?: boolean;
+};
 
-const CategoriesPanel: React.FC = () => {
+export type CategoriesPanelProps = {
+  categoriesData?: CategoryItem[];
+  onSearch?: (searchTerm: string) => void;
+};
+
+const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
+  categoriesData,
+  onSearch = (searchTerm) => console.log(searchTerm),
+}) => {
   return (
     <StyledCategoriesPanel>
       <StyledSearchBarContainer>
-        <SearchBar onSearch={(term) => console.log(term)} />
+        <SearchBar onSearch={onSearch} />
       </StyledSearchBarContainer>
 
       <StyledButtonsSlider>
@@ -59,8 +40,8 @@ const CategoriesPanel: React.FC = () => {
         </div>
 
         <StyledButtonsContainer>
-          {buttonsDummyData.map((i, index) => (
-            <StyledButtonWrapper show={i.showInSmallScreen}>
+          {categoriesData?.map((i) => (
+            <StyledButtonWrapper key={i.id} show={i.showInSmallScreen}>
               <Button active={i.active}>{i.title}</Button>
             </StyledButtonWrapper>
           ))}
