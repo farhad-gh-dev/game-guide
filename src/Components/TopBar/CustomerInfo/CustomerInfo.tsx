@@ -6,8 +6,13 @@ import {
 } from "./CustomerInfo.styled";
 import { CustomIcon, Text, Avatar } from "game-guide-ui-kit";
 import { formatPrice } from "../../../Helpers/string";
+import { type Profile } from "../TopBar";
 
-const CustomerInfo: React.FC = () => {
+export type CustomerInfoProps = {
+  profileData?: Profile;
+};
+
+const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
   return (
     <StyledCustomerInfo>
       <StyledIconsContainer>
@@ -31,11 +36,14 @@ const CustomerInfo: React.FC = () => {
           <span>$</span>
         </div>
         <Text isSpan size="sm">
-          {formatPrice(150000)}
+          {formatPrice(profileData?.credit)}
         </Text>
       </StyledHoldingContainer>
 
-      <Avatar userType="Pro" />
+      <Avatar
+        userType={profileData?.type}
+        imageSrc={profileData?.profileImageUrl}
+      />
     </StyledCustomerInfo>
   );
 };

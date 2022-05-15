@@ -21,12 +21,12 @@ export const categoryItems = [
     showInSmallScreen: true,
   },
   {
-    id: 3,
+    id: 4,
     title: "Sports",
     showInSmallScreen: false,
   },
   {
-    id: 3,
+    id: 5,
     title: "Competitive",
     showInSmallScreen: false,
   },

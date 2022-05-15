@@ -9,11 +9,11 @@ import dummyData from "../DummyData";
 import { TopBar, CategoriesPanel, ItemSlider } from "../Components";
 
 const CategoryPage: React.FC = () => {
-  const { sliderItems, categoryItems } = dummyData;
+  const { categoryItems, sliderItems, userProfile } = dummyData;
 
   return (
     <StyledCategoryPage>
-      <TopBar />
+      <TopBar profileData={userProfile} />
 
       <CategoriesPanel
         categoriesData={categoryItems}

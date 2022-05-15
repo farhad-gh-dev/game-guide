@@ -8,7 +8,18 @@ import {
 import { BrandLogo, Navbar, NavbarItem, SearchBar } from "game-guide-ui-kit";
 import CustomerInfo from "./CustomerInfo/CustomerInfo";
 
-const TopBar: React.FC = () => {
+export type Profile = {
+  id?: string;
+  type?: string;
+  credit?: number;
+  profileImageUrl?: string;
+};
+
+export type TopBarProps = {
+  profileData?: Profile;
+};
+
+const TopBar: React.FC<TopBarProps> = ({ profileData }) => {
   return (
     <StyledTopBar>
       <StyledTopBarBackground />
@@ -17,7 +28,7 @@ const TopBar: React.FC = () => {
 
         <NavbarContent />
 
-        <CustomerInfo />
+        <CustomerInfo profileData={profileData} />
       </StyledDesktopContainer>
 
       <StyledMobileNavbarContainer>
