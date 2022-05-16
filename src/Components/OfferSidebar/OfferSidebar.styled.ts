@@ -9,7 +9,7 @@ export const StyledOfferSidebar = styled.div`
   }
 `;
 
-export const StyledTitleArea = styled.div`
+export const TitleArea = styled.div`
   margin-bottom: 35px;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
@@ -26,7 +26,7 @@ export const StyledTitleArea = styled.div`
   }
 `;
 
-export const StyledOfferCardContainer = styled.div`
+export const OfferCardContainer = styled.div`
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     padding-left: 8px;
   }

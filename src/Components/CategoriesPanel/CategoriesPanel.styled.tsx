@@ -23,7 +23,7 @@ export const StyledCategoriesPanel = styled.div`
   }
 `;
 
-export const StyledSearchBarContainer = styled.div`
+export const SearchBarContainer = styled.div`
   display: none;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
@@ -42,7 +42,7 @@ export const StyledSearchBarContainer = styled.div`
   }
 `;
 
-export const StyledButtonsSlider = styled.div`
+export const ButtonsSlider = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
@@ -63,13 +63,13 @@ export const StyledButtonsSlider = styled.div`
   }
 `;
 
-export const StyledButtonsContainer = styled.div`
+export const ButtonsContainer = styled.div`
   flex: 1;
   display: flex;
   justify-content: space-between;
 `;
 
-export const StyledButtonWrapper = styled.div<{
+export const ButtonWrapper = styled.div<{
   show?: boolean;
 }>`
   padding: 18px 0;

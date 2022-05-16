@@ -1,8 +1,8 @@
 import React from "react";
 import {
   StyledOfferSidebar,
-  StyledTitleArea,
-  StyledOfferCardContainer,
+  TitleArea,
+  OfferCardContainer,
 } from "./OfferSidebar.styled";
 import { Heading, OfferCard, offerItem } from "game-guide-ui-kit";
 
@@ -13,15 +13,15 @@ export type OfferSidebarProps = {
 const OfferSidebar: React.FC<OfferSidebarProps> = ({ offerItems = [] }) => {
   return (
     <StyledOfferSidebar>
-      <StyledTitleArea>
+      <TitleArea>
         <Heading h2>Special Offer</Heading>
-      </StyledTitleArea>
+      </TitleArea>
 
-      <StyledOfferCardContainer>
+      <OfferCardContainer>
         {offerItems.map((item) => {
           return <OfferCard key={item.id} itemData={item} />;
         })}
-      </StyledOfferCardContainer>
+      </OfferCardContainer>
     </StyledOfferSidebar>
   );
 };

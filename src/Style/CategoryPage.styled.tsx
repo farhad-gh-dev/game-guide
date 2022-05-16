@@ -15,7 +15,7 @@ export const StyledCategoryPage = styled.div`
   }
 `;
 
-export const StyledPageContentContainer = styled.div`
+export const PageContentContainer = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -24,7 +24,7 @@ export const StyledPageContentContainer = styled.div`
   }
 `;
 
-export const StyledLeftPanel = styled.div`
+export const LeftPanel = styled.div`
   width: 100%;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
@@ -38,7 +38,7 @@ export const StyledLeftPanel = styled.div`
   }
 `;
 
-export const StyledRightPanel = styled.div`
+export const RightPanel = styled.div`
   width: 100%;
   margin-bottom: 45px;
 
@@ -54,7 +54,7 @@ export const StyledRightPanel = styled.div`
   }
 `;
 
-export const StyledAllOffersButtonContainer = styled.div`
+export const AllOffersButtonContainer = styled.div`
   text-align: center;
 
   .button-content {

@@ -1,10 +1,10 @@
 import React from "react";
 import {
   StyledCategoriesPanel,
-  StyledSearchBarContainer,
-  StyledButtonsSlider,
-  StyledButtonsContainer,
-  StyledButtonWrapper,
+  SearchBarContainer,
+  ButtonsSlider,
+  ButtonsContainer,
+  ButtonWrapper,
 } from "./CategoriesPanel.styled";
 import { SearchBar, Button, CustomIcon } from "game-guide-ui-kit";
 
@@ -26,11 +26,11 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
 }) => {
   return (
     <StyledCategoriesPanel>
-      <StyledSearchBarContainer>
+      <SearchBarContainer>
         <SearchBar onSearch={onSearch} />
-      </StyledSearchBarContainer>
+      </SearchBarContainer>
 
-      <StyledButtonsSlider>
+      <ButtonsSlider>
         <div id="left">
           <CustomIcon
             type="arrow-to-left"
@@ -39,20 +39,20 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
           />
         </div>
 
-        <StyledButtonsContainer>
+        <ButtonsContainer>
           {categoriesData?.map((i) => (
-            <StyledButtonWrapper key={i.id} show={i.showInSmallScreen}>
+            <ButtonWrapper key={i.id} show={i.showInSmallScreen}>
               <Button active={i.active} title={i.title}>
                 {i.title}
               </Button>
-            </StyledButtonWrapper>
+            </ButtonWrapper>
           ))}
-        </StyledButtonsContainer>
+        </ButtonsContainer>
 
         <div id="right">
           <CustomIcon type="arrow-to-right" height="10px" />
         </div>
-      </StyledButtonsSlider>
+      </ButtonsSlider>
     </StyledCategoriesPanel>
   );
 };

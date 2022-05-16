@@ -1,9 +1,9 @@
 import React from "react";
 import {
   StyledTopBar,
-  StyledTopBarBackground,
-  StyledDesktopContainer,
-  StyledMobileNavbarContainer,
+  TopBarBackground,
+  DesktopContainer,
+  MobileNavbarContainer,
 } from "./TopBar.styled";
 import { BrandLogo, Navbar, NavbarItem, SearchBar } from "game-guide-ui-kit";
 import CustomerInfo from "./CustomerInfo/CustomerInfo";
@@ -22,19 +22,19 @@ export type TopBarProps = {
 const TopBar: React.FC<TopBarProps> = ({ profileData }) => {
   return (
     <StyledTopBar>
-      <StyledTopBarBackground />
-      <StyledDesktopContainer>
+      <TopBarBackground />
+      <DesktopContainer>
         <BrandLogo />
 
         <NavbarContent />
 
         <CustomerInfo profileData={profileData} />
-      </StyledDesktopContainer>
+      </DesktopContainer>
 
-      <StyledMobileNavbarContainer>
+      <MobileNavbarContainer>
         <SearchBar />
         <NavbarContent />
-      </StyledMobileNavbarContainer>
+      </MobileNavbarContainer>
     </StyledTopBar>
   );
 };

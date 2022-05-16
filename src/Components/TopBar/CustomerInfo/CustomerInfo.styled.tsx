@@ -10,7 +10,7 @@ export const StyledCustomerInfo = styled.div`
   }
 `;
 
-export const StyledIconsContainer = styled.div`
+export const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ export const StyledIconsContainer = styled.div`
   }
 `;
 
-export const StyledHoldingContainer = styled.div`
+export const HoldingContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: 12px;

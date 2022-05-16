@@ -41,7 +41,7 @@ export const sliderItems = [
     titleImageSrc: ValorantTitleImage,
     overlayImageHeight: 118,
     overlayPositionFromRight: 4,
-    titleImageHeight: 75,
+    titleImageHeight: 55,
     price: 0,
   },
   {

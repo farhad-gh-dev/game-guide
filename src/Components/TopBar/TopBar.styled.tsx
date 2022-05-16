@@ -11,7 +11,7 @@ export const StyledTopBar = styled.div`
   }
 `;
 
-export const StyledTopBarBackground = styled.div`
+export const TopBarBackground = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@ export const StyledTopBarBackground = styled.div`
   }
 `;
 
-export const StyledDesktopContainer = styled.div`
+export const DesktopContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,7 @@ export const StyledDesktopContainer = styled.div`
   }
 `;
 
-export const StyledMobileNavbarContainer = styled.div`
+export const MobileNavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 30px;

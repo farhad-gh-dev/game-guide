@@ -1,8 +1,8 @@
 import React from "react";
 import {
   StyledCustomerInfo,
-  StyledIconsContainer,
-  StyledHoldingContainer,
+  IconsContainer,
+  HoldingContainer,
 } from "./CustomerInfo.styled";
 import { CustomIcon, Text, Avatar } from "game-guide-ui-kit";
 import { formatPrice } from "../../../Helpers/string";
@@ -15,7 +15,7 @@ export type CustomerInfoProps = {
 const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
   return (
     <StyledCustomerInfo>
-      <StyledIconsContainer>
+      <IconsContainer>
         <CustomIcon
           type="shopping-card"
           height="15px"
@@ -29,16 +29,16 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
           heightLaptop="22px"
           heightDesktop="25px"
         />
-      </StyledIconsContainer>
+      </IconsContainer>
 
-      <StyledHoldingContainer>
+      <HoldingContainer>
         <div>
           <span>$</span>
         </div>
         <Text isSpan size="sm">
           {formatPrice(profileData?.credit)}
         </Text>
-      </StyledHoldingContainer>
+      </HoldingContainer>
 
       <Avatar
         userType={profileData?.type}

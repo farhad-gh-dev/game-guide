@@ -1,10 +1,10 @@
 import React from "react";
 import {
   StyledCategoryPage,
-  StyledPageContentContainer,
-  StyledLeftPanel,
-  StyledRightPanel,
-  StyledAllOffersButtonContainer,
+  PageContentContainer,
+  LeftPanel,
+  RightPanel,
+  AllOffersButtonContainer,
 } from "../Style/CategoryPage.styled";
 import dummyData from "../DummyData";
 import {
@@ -27,14 +27,15 @@ const CategoryPage: React.FC = () => {
         onSearch={(searchTerm) => console.log(searchTerm)}
       />
 
-      <StyledPageContentContainer>
-        <StyledLeftPanel>
+      <PageContentContainer>
+        <LeftPanel>
           <ItemSlider sliderItems={sliderItems} />
-        </StyledLeftPanel>
+        </LeftPanel>
 
-        <StyledRightPanel>
+        <RightPanel>
           <OfferSidebar offerItems={offerItems} />
-          <StyledAllOffersButtonContainer>
+
+          <AllOffersButtonContainer>
             <Button active={true}>
               <div className="button-content">
                 See All
@@ -47,9 +48,9 @@ const CategoryPage: React.FC = () => {
                 />
               </div>
             </Button>
-          </StyledAllOffersButtonContainer>
-        </StyledRightPanel>
-      </StyledPageContentContainer>
+          </AllOffersButtonContainer>
+        </RightPanel>
+      </PageContentContainer>
     </StyledCategoryPage>
   );
 };
