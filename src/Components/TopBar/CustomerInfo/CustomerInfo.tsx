@@ -5,7 +5,7 @@ import {
   HoldingContainer,
 } from "./CustomerInfo.styled";
 import { CustomIcon, Text, Avatar } from "game-guide-ui-kit";
-import { formatPrice } from "../../../Helpers/string";
+import helpers from "../../../Helpers";
 import { type Profile } from "../TopBar";
 
 export type CustomerInfoProps = {
@@ -36,7 +36,7 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
           <span>$</span>
         </div>
         <Text isSpan size="sm">
-          {formatPrice(profileData?.credit)}
+          {helpers.formatPrice(profileData?.credit)}
         </Text>
       </HoldingContainer>
 
