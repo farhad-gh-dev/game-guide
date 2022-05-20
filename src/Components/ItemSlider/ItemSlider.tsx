@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { StyledItemSlider } from "./ItemSlider.styled";
 import { Slider, type SliderItem, SliderControl } from "game-guide-ui-kit";
+import { useSlider } from "./useSlider";
 
 export type ItemSliderProps = {
   sliderItems: SliderItem[];
 };
 
 const ItemSlider: React.FC<ItemSliderProps> = ({ sliderItems }) => {
-  const [activeSlideNumber, setActiveSlideNumber] = useState<number>(1);
+  const { activeSlideNumber, setActiveSlideNumber } = useSlider(
+    sliderItems.length,
+    3.5
+  );
+
   return (
     <StyledItemSlider>
       <Slider sliderItems={sliderItems} activeSlide={activeSlideNumber} />
