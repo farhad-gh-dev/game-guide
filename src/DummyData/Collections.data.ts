@@ -1,84 +1,85 @@
+import ModernWarfare2007Image from "../Assets/Images/cod_modern_warfare_2007_poster.jpg";
+import ModernWarfare2Image from "../Assets/Images/cod_modern_warfare_2_poster.jpg";
+import ModernWarfare3Image from "../Assets/Images/cod_modern_warfare_3_poster.jpg";
+import BlackOpsImage from "../Assets/Images/cod_black_ops_poster.jpg";
+import BlackOps2Image from "../Assets/Images/cod_black_ops_2_poster.jpg";
+import BlackOps3Image from "../Assets/Images/cod_black_ops_3_poster.jpg";
+import InfiniteWarfareImage from "../Assets/Images/cod_infinite_warfare_poster.jpg";
+import WWIIImage from "../Assets/Images/cod_wwii_poster.jpg";
+import BlackOps4Image from "../Assets/Images/cod_black_ops_4_poster.jpg";
+import ModernWarfare2019Image from "../Assets/Images/cod_modern_warfare_2019_poster.jpg";
+import BlackOpsColdWarImage from "../Assets/Images/cod_black_ops_cold_war_poster.jpg";
+
 export const codCollection = {
   collection_details: undefined,
+  installation_guide: undefined,
+  comments: undefined,
   available_versions: [
     {
       id: 0,
       title: "Modern Warfare 2007",
       rating: 9.4,
-      imageSrc:
-        "https://m.media-amazon.com/images/M/MV5BZmFiOWJkNWYtNjBjYi00OTk5LTg0M2EtOTkzZDhhODc3OGNlXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg",
+      imageSrc: ModernWarfare2007Image,
     },
     {
       id: 1,
       title: "Modern Warfare 2",
       rating: 9.5,
-      imageSrc:
-        "https://static.posters.cz/image/1300/poster/call-of-duty-mw2-cover-i7151.jpg",
+      imageSrc: ModernWarfare2Image,
     },
     {
       id: 2,
       title: "Modern Warfare 3",
       rating: 9.0,
-      imageSrc:
-        "https://m.media-amazon.com/images/I/61f88GiumQL._AC_SY741_.jpg",
+      imageSrc: ModernWarfare3Image,
     },
     {
       id: 3,
       title: "Black Ops",
       rating: 8.5,
-      imageSrc:
-        "https://static.posters.cz/image/750/poster/call-of-duty-black-ops-cover-i8700.jpg",
+      imageSrc: BlackOpsImage,
     },
     {
       id: 4,
       title: "Black Ops 2",
       rating: 9.3,
-      imageSrc:
-        "https://static.posters.cz/image/750/poster/call-of-duty-black-ops-ii-cover-i12816.jpg",
+      imageSrc: BlackOps2Image,
     },
     {
       id: 5,
       title: "Black Ops 3",
       rating: 9.2,
-      imageSrc:
-        "https://m.media-amazon.com/images/M/MV5BNWMwYmE3NmMtZjFlYS00Y2M0LTljOTEtY2NhNGQ3Y2E1MWQyXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      imageSrc: BlackOps3Image,
     },
     {
       id: 6,
       title: "Infinite Warfare",
       rating: 7.7,
-      imageSrc:
-        "https://m.media-amazon.com/images/I/61nmw2lo+nL._AC_SY741_.jpg",
+      imageSrc: InfiniteWarfareImage,
     },
     {
       id: 7,
       title: "WWII",
       rating: 8,
-      imageSrc:
-        "https://m.media-amazon.com/images/I/71xO89Hen+L._AC_SY679_.jpg",
+      imageSrc: WWIIImage,
     },
     {
       id: 8,
       title: "Black Ops 4",
       rating: 9.5,
-      imageSrc:
-        "https://static.posters.cz/image/750/poster/call-of-duty-black-ops-4-trio-i63899.jpg",
+      imageSrc: BlackOps4Image,
     },
     {
       id: 9,
       title: "Modern Warfare 2019",
       rating: 8.0,
-      imageSrc:
-        "https://m.media-amazon.com/images/M/MV5BMTc3NWY2ZTMtNTNlZC00MWM2LWI5MzYtMmU1YzY0ODk5ZjQ1XkEyXkFqcGdeQXVyODA2MTkwODk@._V1_.jpg",
+      imageSrc: ModernWarfare2019Image,
     },
     {
       id: 10,
       title: "Black Ops Cold War",
       rating: 7.6,
-      imageSrc:
-        "https://static.posters.cz/image/750/poster/call-of-duty-black-ops-cold-war-split-i100281.jpg",
+      imageSrc: BlackOpsColdWarImage,
     },
   ],
-  installation_guide: undefined,
-  comments: undefined,
 };
