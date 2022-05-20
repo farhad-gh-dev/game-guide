@@ -41,11 +41,16 @@ export const LeftPanel = styled.div`
 export const RightPanel = styled.div`
   width: 100%;
   margin-bottom: 45px;
+  height: 100%;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     width: 30%;
     padding-left: 20px;
     margin-bottom: 50px;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 
   @media (min-width: ${styles.breakpoint.largeScreen}px) {

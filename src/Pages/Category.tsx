@@ -12,11 +12,13 @@ import {
   CategoriesPanel,
   ItemSlider,
   OfferSidebar,
+  TabsPanel,
 } from "../Components";
 import { Button, CustomIcon } from "game-guide-ui-kit";
 
 const CategoryPage: React.FC = () => {
-  const { categoryItems, offerItems, sliderItems, userProfile } = dummyData;
+  const { categoryItems, codCollection, offerItems, sliderItems, userProfile } =
+    dummyData;
 
   return (
     <StyledCategoryPage>
@@ -30,6 +32,7 @@ const CategoryPage: React.FC = () => {
       <PageContentContainer>
         <LeftPanel>
           <ItemSlider sliderItems={sliderItems} />
+          <TabsPanel tabsData={codCollection} />
         </LeftPanel>
 
         <RightPanel>
