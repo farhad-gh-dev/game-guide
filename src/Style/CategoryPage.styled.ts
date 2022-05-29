@@ -4,6 +4,7 @@ import { styles } from "game-guide-ui-kit";
 export const StyledCategoryPage = styled.div`
   margin: 0 auto;
   padding: 0 25px;
+  max-width: 375px;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     max-width: 1180px;
