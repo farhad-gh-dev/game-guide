@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyledItemSlider } from "./ItemSlider.styled";
 import { Slider, type SliderItem, SliderControl } from "game-guide-ui-kit";
 import { useSlider } from "./useSlider";

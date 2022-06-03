@@ -13,7 +13,7 @@ export const useSlider = (numberOfItems: number, duration: number) => {
     }, duration * 1000);
 
     return () => clearInterval(sliderTimer);
-  }, [activeSlideNumber]);
+  }, [activeSlideNumber, numberOfItems, duration]);
 
   return {
     activeSlideNumber,

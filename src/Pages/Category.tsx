@@ -13,6 +13,7 @@ import {
   ItemSlider,
   OfferSidebar,
   TabsPanel,
+  Footer,
 } from "../Components";
 import { Button, CustomIcon } from "game-guide-ui-kit";
 
@@ -24,36 +25,40 @@ const CategoryPage: React.FC = () => {
     <StyledCategoryPage>
       <TopBar profileData={userProfile} />
 
-      <CategoriesPanel
-        categoriesData={categoryItems}
-        onSearch={(searchTerm) => console.log(searchTerm)}
-      />
+      <main>
+        <CategoriesPanel
+          categoriesData={categoryItems}
+          onSearch={(searchTerm) => console.log(searchTerm)}
+        />
 
-      <PageContentContainer>
-        <LeftPanel>
-          <ItemSlider sliderItems={sliderItems} />
-          <TabsPanel tabsData={codCollection} />
-        </LeftPanel>
+        <PageContentContainer>
+          <LeftPanel>
+            <ItemSlider sliderItems={sliderItems} />
+            <TabsPanel tabsData={codCollection} />
+          </LeftPanel>
 
-        <RightPanel>
-          <OfferSidebar offerItems={offerItems} />
+          <RightPanel>
+            <OfferSidebar offerItems={offerItems} />
 
-          <AllOffersButtonContainer>
-            <Button active={true}>
-              <div className="button-content">
-                See All
-                <CustomIcon
-                  className="play-icon"
-                  type="play"
-                  height="9px"
-                  heightLaptop="15px"
-                  heightDesktop="18px"
-                />
-              </div>
-            </Button>
-          </AllOffersButtonContainer>
-        </RightPanel>
-      </PageContentContainer>
+            <AllOffersButtonContainer>
+              <Button active={true}>
+                <div className="button-content">
+                  See All
+                  <CustomIcon
+                    className="play-icon"
+                    type="play"
+                    height="9px"
+                    heightLaptop="15px"
+                    heightDesktop="18px"
+                  />
+                </div>
+              </Button>
+            </AllOffersButtonContainer>
+          </RightPanel>
+        </PageContentContainer>
+      </main>
+
+      <Footer />
     </StyledCategoryPage>
   );
 };

@@ -24,7 +24,9 @@ const TopBar: React.FC<TopBarProps> = ({ profileData }) => {
     <StyledTopBar>
       <TopBarBackground />
       <DesktopContainer>
-        <BrandLogo />
+        <a href="/">
+          <BrandLogo />
+        </a>
 
         <NavbarContent />
 
