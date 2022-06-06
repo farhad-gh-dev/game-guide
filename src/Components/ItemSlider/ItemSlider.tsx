@@ -15,7 +15,11 @@ const ItemSlider: React.FC<ItemSliderProps> = ({ sliderItems }) => {
 
   return (
     <StyledItemSlider>
-      <Slider sliderItems={sliderItems} activeSlide={activeSlideNumber} />
+      <Slider
+        sliderItems={sliderItems}
+        activeSlide={activeSlideNumber}
+        onBuyHandler={(i) => console.log(i)}
+      />
 
       <div>
         <SliderControl

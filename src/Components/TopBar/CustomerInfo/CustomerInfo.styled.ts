@@ -8,6 +8,14 @@ export const StyledCustomerInfo = styled.div`
   span {
     color: ${styles.color.lightest};
   }
+
+  button {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
 `;
 
 export const IconsContainer = styled.div`

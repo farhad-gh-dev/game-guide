@@ -16,19 +16,23 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
   return (
     <StyledCustomerInfo>
       <IconsContainer>
-        <CustomIcon
-          type="shopping-card"
-          height="15px"
-          heightLaptop="22px"
-          heightDesktop="25px"
-        />
+        <button onClick={() => console.log("clicked on shopping-card")}>
+          <CustomIcon
+            type="shopping-card"
+            height="15px"
+            heightLaptop="22px"
+            heightDesktop="25px"
+          />
+        </button>
 
-        <CustomIcon
-          type="bell"
-          height="15px"
-          heightLaptop="22px"
-          heightDesktop="25px"
-        />
+        <button onClick={() => console.log("clicked on notifications")}>
+          <CustomIcon
+            type="bell"
+            height="15px"
+            heightLaptop="22px"
+            heightDesktop="25px"
+          />
+        </button>
       </IconsContainer>
 
       <HoldingContainer>
@@ -40,10 +44,12 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
         </Text>
       </HoldingContainer>
 
-      <Avatar
-        userType={profileData?.type}
-        imageSrc={profileData?.profileImageUrl}
-      />
+      <button onClick={() => console.log("clicked on avatar")}>
+        <Avatar
+          userType={profileData?.type}
+          imageSrc={profileData?.profileImageUrl}
+        />
+      </button>
     </StyledCustomerInfo>
   );
 };
