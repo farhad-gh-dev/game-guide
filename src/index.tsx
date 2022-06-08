@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { Provider } from "react-redux";
+import { store } from "./Store";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyle } from "game-guide-ui-kit";
 
@@ -9,8 +11,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
+    <Provider store={store}>
+      <GlobalStyle />
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
