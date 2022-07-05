@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface AppState {
-  activeCategory?: string;
+  activeCategory?: string | undefined;
   message?: string;
 }
 
 const initialState: AppState = {
-  activeCategory: "action",
+  activeCategory: "",
   message: "hello world",
 };
 
@@ -15,8 +15,10 @@ export const appSlice = createSlice({
   initialState,
 
   reducers: {
-    setActiveCategory: (state, action: PayloadAction<string>) => {
-      state.activeCategory = action.payload;
+    setActiveCategory: (state, action: PayloadAction<string | undefined>) => {
+      if (state.activeCategory !== action.payload) {
+        state.activeCategory = action.payload;
+      }
     },
     changeMessage: (state, action: PayloadAction<string>) => {
       state.message = state.message + " / " + action.payload;

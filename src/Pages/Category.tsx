@@ -17,25 +17,21 @@ import {
 } from "../Components";
 import { Button, CustomIcon } from "game-guide-ui-kit";
 import { useParams } from "react-router-dom";
-import { useAppSelector, useAppDispatch } from "../Hooks/store";
+import { useAppDispatch } from "../Hooks/store";
 import { setActiveCategory } from "../Store/appSlice";
 
 const CategoryPage: React.FC = () => {
   const { categoryItems, codCollection, offerItems, sliderItems, userProfile } =
     dummyData;
 
+  const dispatch = useAppDispatch();
   const urlParams = useParams();
   const targetCategory = urlParams.category;
 
-  const dispatch = useAppDispatch();
-  const activeCategory = useAppSelector((store) => store.app.activeCategory);
-
   useEffect(() => {
-    if (targetCategory) {
-      dispatch(setActiveCategory(targetCategory));
-    }
-    console.log(activeCategory);
-  }, [activeCategory, targetCategory]);
+    dispatch(setActiveCategory(targetCategory));
+    console.log("test");
+  }, [targetCategory]);
 
   return (
     <StyledCategoryPage>
@@ -46,7 +42,7 @@ const CategoryPage: React.FC = () => {
           categoriesData={categoryItems.map((i) => {
             return {
               ...i,
-              active: i.title === activeCategory,
+              active: i.title === targetCategory,
             };
           })}
           onSearch={(searchTerm) => console.log(searchTerm)}
