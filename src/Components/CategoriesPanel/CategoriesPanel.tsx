@@ -7,6 +7,7 @@ import {
   ButtonWrapper,
 } from "./CategoriesPanel.styled";
 import { SearchBar, Button, CustomIcon } from "game-guide-ui-kit";
+import { Link, Navigate } from "react-router-dom";
 
 export type CategoryItem = {
   id?: number;
@@ -42,9 +43,11 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
         <ButtonsContainer>
           {categoriesData?.map((i) => (
             <ButtonWrapper key={i.id} show={i.showInSmallScreen}>
-              <Button active={i.active} title={i.title}>
-                {i.title}
-              </Button>
+              <Link to={`/categories/${i.title}`}>
+                <Button active={i.active} title={i.title}>
+                  {i.title}
+                </Button>
+              </Link>
             </ButtonWrapper>
           ))}
         </ButtonsContainer>

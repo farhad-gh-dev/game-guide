@@ -73,6 +73,7 @@ export const ButtonWrapper = styled.div<{
   show?: boolean;
 }>`
   padding: 18px 0;
+  text-transform: capitalize;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     padding: 24px 0;
