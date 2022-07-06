@@ -14,44 +14,46 @@ import BloodHuntBackgroundImage from "../Assets/Images/bloodhunt_background.jpg"
 import BloodHuntOverlayImage from "../Assets/Images/bloodhunt_overlay.png";
 import BloodHuntTitleImage from "../Assets/Images/bloodhunt_title.png";
 
-export const sliderItems = [
-  {
-    id: 1,
-    backgroundImageSrc: CyberpunkBackgroundImage,
-    overlayImageSrc: CyberpunkOverlayImage,
-    titleImageSrc: CyberpunkTitleImage,
-    overlayPositionFromRight: 5,
-    titleImageHeight: 50,
-    price: 35.64,
-  },
-  {
-    id: 2,
-    backgroundImageSrc: WitcherBackgroundImage,
-    overlayImageSrc: WitcherOverlayImage,
-    titleImageSrc: WitcherTitleImage,
-    overlayImageHeight: 120,
-    overlayPositionFromRight: 6,
-    titleImageHeight: 70,
-    price: 49.99,
-  },
-  {
-    id: 3,
-    backgroundImageSrc: ValorantBackgroundImage,
-    overlayImageSrc: ValorantOverlayImage,
-    titleImageSrc: ValorantTitleImage,
-    overlayImageHeight: 118,
-    overlayPositionFromRight: 4,
-    titleImageHeight: 55,
-    price: 0,
-  },
-  {
-    id: 4,
-    backgroundImageSrc: BloodHuntBackgroundImage,
-    overlayImageSrc: BloodHuntOverlayImage,
-    titleImageSrc: BloodHuntTitleImage,
-    overlayImageHeight: 115,
-    overlayPositionFromRight: 0,
-    titleImageHeight: 70,
-    price: 0,
-  },
-];
+export const sliderItems = {
+  action: [
+    {
+      id: 1,
+      backgroundImageSrc: CyberpunkBackgroundImage,
+      overlayImageSrc: CyberpunkOverlayImage,
+      titleImageSrc: CyberpunkTitleImage,
+      overlayPositionFromRight: 5,
+      titleImageHeight: 50,
+      price: 35.64,
+    },
+    {
+      id: 2,
+      backgroundImageSrc: WitcherBackgroundImage,
+      overlayImageSrc: WitcherOverlayImage,
+      titleImageSrc: WitcherTitleImage,
+      overlayImageHeight: 120,
+      overlayPositionFromRight: 6,
+      titleImageHeight: 70,
+      price: 49.99,
+    },
+    {
+      id: 3,
+      backgroundImageSrc: ValorantBackgroundImage,
+      overlayImageSrc: ValorantOverlayImage,
+      titleImageSrc: ValorantTitleImage,
+      overlayImageHeight: 118,
+      overlayPositionFromRight: 4,
+      titleImageHeight: 55,
+      price: 0,
+    },
+    {
+      id: 4,
+      backgroundImageSrc: BloodHuntBackgroundImage,
+      overlayImageSrc: BloodHuntOverlayImage,
+      titleImageSrc: BloodHuntTitleImage,
+      overlayImageHeight: 115,
+      overlayPositionFromRight: 0,
+      titleImageHeight: 70,
+      price: 0,
+    },
+  ],
+};

@@ -1,13 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { type SliderItem } from "game-guide-ui-kit";
+import dummyData from "../DummyData";
 
 export interface AppState {
+  loading?: boolean;
   activeCategory?: string | undefined;
-  message?: string;
+  sliderItems?: SliderItem[];
 }
 
 const initialState: AppState = {
+  loading: false,
   activeCategory: "",
-  message: "hello world",
+  sliderItems: dummyData.sliderItems["action"],
 };
 
 export const appSlice = createSlice({
@@ -17,15 +21,16 @@ export const appSlice = createSlice({
   reducers: {
     setActiveCategory: (state, action: PayloadAction<string | undefined>) => {
       if (state.activeCategory !== action.payload) {
+        state.loading = true;
         state.activeCategory = action.payload;
+        setTimeout(() => {
+          state.loading = false;
+        }, 300);
       }
-    },
-    changeMessage: (state, action: PayloadAction<string>) => {
-      state.message = state.message + " / " + action.payload;
     },
   },
 });
 
-export const { setActiveCategory, changeMessage } = appSlice.actions;
+export const { setActiveCategory } = appSlice.actions;
 
 export default appSlice.reducer;

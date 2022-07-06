@@ -17,7 +17,7 @@ import {
 } from "../Components";
 import { Button, CustomIcon } from "game-guide-ui-kit";
 import { useParams } from "react-router-dom";
-import { useAppDispatch } from "../Hooks/store";
+import { useAppDispatch, useAppSelector } from "../Hooks/store";
 import { setActiveCategory } from "../Store/appSlice";
 
 const CategoryPage: React.FC = () => {
@@ -25,12 +25,14 @@ const CategoryPage: React.FC = () => {
     dummyData;
 
   const dispatch = useAppDispatch();
+  const activeCategory = useAppSelector((store) => store.app.activeCategory);
+  const isLoading = useAppSelector((store) => store.app.loading);
+
   const urlParams = useParams();
   const targetCategory = urlParams.category;
 
   useEffect(() => {
     dispatch(setActiveCategory(targetCategory));
-    console.log("test");
   }, [targetCategory]);
 
   return (
@@ -50,8 +52,14 @@ const CategoryPage: React.FC = () => {
 
         <PageContentContainer>
           <LeftPanel>
-            <ItemSlider sliderItems={sliderItems} />
-            <TabsPanel tabsData={codCollection} />
+            {!activeCategory || isLoading ? (
+              <h1>Loading...</h1>
+            ) : (
+              <>
+                <ItemSlider sliderItems={sliderItems["action"]} />
+                <TabsPanel tabsData={codCollection} />
+              </>
+            )}
           </LeftPanel>
 
           <RightPanel>
