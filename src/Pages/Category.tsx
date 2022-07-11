@@ -52,7 +52,7 @@ const CategoryPage: React.FC = () => {
 
         <PageContentContainer>
           <LeftPanel>
-            {!activeCategory || isLoading ? (
+            {!activeCategory ? (
               <h1>Loading...</h1>
             ) : (
               <>
