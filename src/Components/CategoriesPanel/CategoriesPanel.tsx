@@ -7,7 +7,7 @@ import {
   ButtonWrapper,
 } from "./CategoriesPanel.styled";
 import { SearchBar, Button, CustomIcon } from "game-guide-ui-kit";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export type CategoryItem = {
   id?: number;
