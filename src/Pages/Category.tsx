@@ -56,7 +56,7 @@ const CategoryPage: React.FC = () => {
               <h1>Loading...</h1>
             ) : (
               <>
-                <ItemSlider sliderItems={sliderItems["action"]} />
+                <ItemSlider sliderItems={sliderItems["strategic"]} />
                 <TabsPanel tabsData={codCollection} />
               </>
             )}
