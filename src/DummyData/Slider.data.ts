@@ -30,6 +30,18 @@ import StarCraftIIBackgroundImage from "../Assets/Images/starcraft_II_background
 import StarCraftIIOverlayImage from "../Assets/Images/starcraft_II_overlay.png";
 import StarCraftIITitleImage from "../Assets/Images/starcraft_II_title.png";
 
+import TheWolfAmongUsBackgroundImage from "../Assets/Images/the_wolf_among_us_background.jpg";
+import TheWolfAmongUsOverlayImage from "../Assets/Images/the_wolf_among_us_overlay.png";
+import TheWolfAmongUsTitleImage from "../Assets/Images/the_wolf_among_us_title.png";
+
+import DiscoElysiumBackgroundImage from "../Assets/Images/disco_elysium_background.jpg";
+import DiscoElysiumOverlayImage from "../Assets/Images/disco_elysium_overlay.png";
+import DiscoElysiumTitleImage from "../Assets/Images/disco_elysium_title.png";
+
+import TheSinkingCityBackgroundImage from "../Assets/Images/the_sinking_city_background.jpg";
+import TheSinkingCityOverlayImage from "../Assets/Images/the_sinking_city_overlay.png";
+import TheSinkingCityTitleImage from "../Assets/Images/the_sinking_city_title.png";
+
 export const sliderItems = {
   action: [
     {
@@ -81,7 +93,7 @@ export const sliderItems = {
       overlayImageHeight: 115,
       overlayPositionFromRight: -1,
       titleImageHeight: 75,
-      price: 35.64,
+      price: 49.99,
     },
     {
       id: 2,
@@ -91,7 +103,7 @@ export const sliderItems = {
       overlayImageHeight: 120,
       overlayPositionFromRight: 7,
       titleImageHeight: 63,
-      price: 35.64,
+      price: 59.99,
     },
     {
       id: 3,
@@ -101,7 +113,7 @@ export const sliderItems = {
       overlayImageHeight: 120,
       overlayPositionFromRight: 7,
       titleImageHeight: 90,
-      price: 35.64,
+      price: 0,
     },
     {
       id: 4,
@@ -111,7 +123,39 @@ export const sliderItems = {
       overlayImageHeight: 120,
       overlayPositionFromRight: 9,
       titleImageHeight: 70,
-      price: 35.64,
+      price: 0,
+    },
+  ],
+  mystery: [
+    {
+      id: 1,
+      backgroundImageSrc: TheWolfAmongUsBackgroundImage,
+      overlayImageSrc: TheWolfAmongUsOverlayImage,
+      titleImageSrc: TheWolfAmongUsTitleImage,
+      overlayImageHeight: 113,
+      overlayPositionFromRight: -2,
+      titleImageHeight: 75,
+      price: 14.99,
+    },
+    {
+      id: 2,
+      backgroundImageSrc: DiscoElysiumBackgroundImage,
+      overlayImageSrc: DiscoElysiumOverlayImage,
+      titleImageSrc: DiscoElysiumTitleImage,
+      overlayImageHeight: 116,
+      overlayPositionFromRight: 2,
+      titleImageHeight: 72,
+      price: 39.99,
+    },
+    {
+      id: 3,
+      backgroundImageSrc: TheSinkingCityBackgroundImage,
+      overlayImageSrc: TheSinkingCityOverlayImage,
+      titleImageSrc: TheSinkingCityTitleImage,
+      overlayImageHeight: 110,
+      overlayPositionFromRight: 5,
+      titleImageHeight: 72,
+      price: 49.77,
     },
   ],
 };
