@@ -42,6 +42,10 @@ import TheSinkingCityBackgroundImage from "../Assets/Images/the_sinking_city_bac
 import TheSinkingCityOverlayImage from "../Assets/Images/the_sinking_city_overlay.png";
 import TheSinkingCityTitleImage from "../Assets/Images/the_sinking_city_title.png";
 
+import SuperMegaBaseball3BackgroundImage from "../Assets/Images/super_mega_baseball_3_background.jpg";
+import SuperMegaBaseball3OverlayImage from "../Assets/Images/super_mega_baseball_3_overlay.png";
+import SuperMegaBaseball3TitleImage from "../Assets/Images/super_mega_baseball_3_title.png";
+
 export const sliderItems = {
   action: [
     {
@@ -156,6 +160,18 @@ export const sliderItems = {
       overlayPositionFromRight: 5,
       titleImageHeight: 72,
       price: 49.77,
+    },
+  ],
+  sports: [
+    {
+      id: 1,
+      backgroundImageSrc: SuperMegaBaseball3BackgroundImage,
+      overlayImageSrc: SuperMegaBaseball3OverlayImage,
+      titleImageSrc: SuperMegaBaseball3TitleImage,
+      overlayImageHeight: 120,
+      overlayPositionFromRight: 9,
+      titleImageHeight: 55,
+      price: 14.99,
     },
   ],
 };
