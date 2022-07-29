@@ -73,7 +73,6 @@ export const ButtonWrapper = styled.div<{
   show?: boolean;
 }>`
   padding: 18px 0;
-  text-transform: capitalize;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     padding: 24px 0;
@@ -81,6 +80,10 @@ export const ButtonWrapper = styled.div<{
 
   @media (min-width: ${styles.breakpoint.largeScreen}px) {
     padding: 43px 0;
+  }
+
+  button {
+    text-transform: capitalize;
   }
 
   ${(props) =>

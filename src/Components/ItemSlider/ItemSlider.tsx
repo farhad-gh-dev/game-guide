@@ -16,12 +16,13 @@ const ItemSlider: React.FC<ItemSliderProps> = ({ sliderItems }) => {
   return (
     <StyledItemSlider>
       <Slider
+        className="slider-panels"
         sliderItems={sliderItems}
         activeSlide={activeSlideNumber}
         onBuyHandler={(i) => console.log(i)}
       />
 
-      <div>
+      <div className="slider-control-container">
         <SliderControl
           numberOfSlides={sliderItems.length}
           activeSlide={activeSlideNumber}

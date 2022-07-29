@@ -15,4 +15,12 @@ export const StyledItemSlider = styled.div`
     margin-top: 75px;
     margin-bottom: 45px;
   }
+
+  .slider-panels {
+    z-index: 0;
+  }
+
+  .slider-control-container {
+    z-index: 10;
+  }
 `;

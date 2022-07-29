@@ -26,7 +26,7 @@ export const categoryItems = [
   },
   {
     id: 5,
-    title: "competitive",
+    title: "hack & slash",
     showInSmallScreen: false,
   },
 ];
