@@ -58,9 +58,17 @@ import SuperMegaBaseball3BackgroundImage from "../Assets/Images/super_mega_baseb
 import SuperMegaBaseball3OverlayImage from "../Assets/Images/super_mega_baseball_3_overlay.png";
 import SuperMegaBaseball3TitleImage from "../Assets/Images/super_mega_baseball_3_title.png";
 
-import DevilMayCry5BackgroundImage from "../Assets/Images/devil_may_cry_5_background.jpg";
-import DevilMayCry5OverlayImage from "../Assets/Images/devil_may_cry_5_overlay.png";
-import DevilMayCry5TitleImage from "../Assets/Images/devil_may_cry_5_title.png";
+import NierAutomataBackgroundImage from "../Assets/Images/nier_automata_background.jpg";
+import NierAutomataOverlayImage from "../Assets/Images/nier_automata_overlay.png";
+import NierAutomataTitleImage from "../Assets/Images/nier_automata_title.png";
+
+import SekiroShadowsDieTwiceBackgroundImage from "../Assets/Images/sekiro_shadows_die_twice_background.jpg";
+import SekiroShadowsDieTwiceOverlayImage from "../Assets/Images/sekiro_shadows_die_twice_overlay.png";
+import SekiroShadowsDieTwiceTitleImage from "../Assets/Images/sekiro_shadows_die_twice_title.png";
+
+import GodOfWarBackgroundImage from "../Assets/Images/god_of_war_background.jpg";
+import GodOfWarOverlayImage from "../Assets/Images/god_of_war_overlay.png";
+import GodOfWarTitleImage from "../Assets/Images/god_of_war_title.png";
 
 export const sliderItems = {
   action: [
@@ -224,13 +232,33 @@ export const sliderItems = {
   hack_and_slash: [
     {
       id: 1,
-      backgroundImageSrc: DevilMayCry5BackgroundImage,
-      // overlayImageSrc: DevilMayCry5OverlayImage,
-      titleImageSrc: DevilMayCry5TitleImage,
+      backgroundImageSrc: NierAutomataBackgroundImage,
+      overlayImageSrc: NierAutomataOverlayImage,
+      titleImageSrc: NierAutomataTitleImage,
+      overlayImageHeight: 112,
+      overlayPositionFromRight: 6,
+      titleImageHeight: 60,
+      price: 39.99,
+    },
+    {
+      id: 2,
+      backgroundImageSrc: SekiroShadowsDieTwiceBackgroundImage,
+      overlayImageSrc: SekiroShadowsDieTwiceOverlayImage,
+      titleImageSrc: SekiroShadowsDieTwiceTitleImage,
       overlayImageHeight: 120,
-      overlayPositionFromRight: -8,
-      titleImageHeight: 100,
-      price: 37.65,
+      overlayPositionFromRight: 8,
+      titleImageHeight: 65,
+      price: 39.99,
+    },
+    {
+      id: 3,
+      backgroundImageSrc: GodOfWarBackgroundImage,
+      overlayImageSrc: GodOfWarOverlayImage,
+      titleImageSrc: GodOfWarTitleImage,
+      overlayImageHeight: 118,
+      overlayPositionFromRight: 6,
+      titleImageHeight: 60,
+      price: 39.99,
     },
   ],
 };
