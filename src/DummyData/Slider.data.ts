@@ -257,7 +257,7 @@ export const sliderItems = {
       titleImageSrc: GodOfWarTitleImage,
       overlayImageHeight: 118,
       overlayPositionFromRight: 6,
-      titleImageHeight: 60,
+      titleImageHeight: 70,
       price: 39.99,
     },
   ],
