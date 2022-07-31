@@ -1,78 +1,78 @@
-import ValorantBackgroundImage from "../Assets/Images/valorant_background.jpg";
-import ValorantOverlayImage from "../Assets/Images/valorant_overlay.png";
-import ValorantTitleImage from "../Assets/Images/valorant_title.png";
+import ValorantBackgroundImage from "../Assets/Images/slider/valorant_background.jpg";
+import ValorantOverlayImage from "../Assets/Images/slider/valorant_overlay.png";
+import ValorantTitleImage from "../Assets/Images/slider/valorant_title.png";
 
-import WitcherBackgroundImage from "../Assets/Images/witcher3_background.jpg";
-import WitcherOverlayImage from "../Assets/Images/witcher3_overlay.png";
-import WitcherTitleImage from "../Assets/Images/witcher3_title.png";
+import WitcherBackgroundImage from "../Assets/Images/slider/witcher3_background.jpg";
+import WitcherOverlayImage from "../Assets/Images/slider/witcher3_overlay.png";
+import WitcherTitleImage from "../Assets/Images/slider/witcher3_title.png";
 
-import CyberpunkBackgroundImage from "../Assets/Images/cyberpunk_background.jpg";
-import CyberpunkOverlayImage from "../Assets/Images/cyberpunk_overlay.png";
-import CyberpunkTitleImage from "../Assets/Images/cyberpunk_title.png";
+import CyberpunkBackgroundImage from "../Assets/Images/slider/cyberpunk_background.jpg";
+import CyberpunkOverlayImage from "../Assets/Images/slider/cyberpunk_overlay.png";
+import CyberpunkTitleImage from "../Assets/Images/slider/cyberpunk_title.png";
 
-import BloodHuntBackgroundImage from "../Assets/Images/bloodhunt_background.jpg";
-import BloodHuntOverlayImage from "../Assets/Images/bloodhunt_overlay.png";
-import BloodHuntTitleImage from "../Assets/Images/bloodhunt_title.png";
+import BloodHuntBackgroundImage from "../Assets/Images/slider/bloodhunt_background.jpg";
+import BloodHuntOverlayImage from "../Assets/Images/slider/bloodhunt_overlay.png";
+import BloodHuntTitleImage from "../Assets/Images/slider/bloodhunt_title.png";
 
-import CrusaderKingsIIIBackgroundImage from "../Assets/Images/crusader_kings_III_background.jpg";
-import CrusaderKingsIIIOverlayImage from "../Assets/Images/crusader_kings_III_overlay.png";
-import CrusaderKingsIIITitleImage from "../Assets/Images/crusader_kings_III_title.png";
+import CrusaderKingsIIIBackgroundImage from "../Assets/Images/slider/crusader_kings_III_background.jpg";
+import CrusaderKingsIIIOverlayImage from "../Assets/Images/slider/crusader_kings_III_overlay.png";
+import CrusaderKingsIIITitleImage from "../Assets/Images/slider/crusader_kings_III_title.png";
 
-import CivilizationVIBackgroundImage from "../Assets/Images/civilization_vi_background.jpg";
-import CivilizationVIOverlayImage from "../Assets/Images/civilization_vi_overlay.png";
-import CivilizationVITitleImage from "../Assets/Images/civilization_vi_title.png";
+import CivilizationVIBackgroundImage from "../Assets/Images/slider/civilization_vi_background.jpg";
+import CivilizationVIOverlayImage from "../Assets/Images/slider/civilization_vi_overlay.png";
+import CivilizationVITitleImage from "../Assets/Images/slider/civilization_vi_title.png";
 
-import XCOM2BackgroundImage from "../Assets/Images/XCOM_2_background.jpg";
-import XCOM2OverlayImage from "../Assets/Images/XCOM_2_overlay.png";
-import XCOM2TitleImage from "../Assets/Images/XCOM_2_title.png";
+import XCOM2BackgroundImage from "../Assets/Images/slider/XCOM_2_background.jpg";
+import XCOM2OverlayImage from "../Assets/Images/slider/XCOM_2_overlay.png";
+import XCOM2TitleImage from "../Assets/Images/slider/XCOM_2_title.png";
 
-import StarCraftIIBackgroundImage from "../Assets/Images/starcraft_II_background.jpg";
-import StarCraftIIOverlayImage from "../Assets/Images/starcraft_II_overlay.png";
-import StarCraftIITitleImage from "../Assets/Images/starcraft_II_title.png";
+import StarCraftIIBackgroundImage from "../Assets/Images/slider/starcraft_II_background.jpg";
+import StarCraftIIOverlayImage from "../Assets/Images/slider/starcraft_II_overlay.png";
+import StarCraftIITitleImage from "../Assets/Images/slider/starcraft_II_title.png";
 
-import TheWolfAmongUsBackgroundImage from "../Assets/Images/the_wolf_among_us_background.jpg";
-import TheWolfAmongUsOverlayImage from "../Assets/Images/the_wolf_among_us_overlay.png";
-import TheWolfAmongUsTitleImage from "../Assets/Images/the_wolf_among_us_title.png";
+import TheWolfAmongUsBackgroundImage from "../Assets/Images/slider/the_wolf_among_us_background.jpg";
+import TheWolfAmongUsOverlayImage from "../Assets/Images/slider/the_wolf_among_us_overlay.png";
+import TheWolfAmongUsTitleImage from "../Assets/Images/slider/the_wolf_among_us_title.png";
 
-import DiscoElysiumBackgroundImage from "../Assets/Images/disco_elysium_background.jpg";
-import DiscoElysiumOverlayImage from "../Assets/Images/disco_elysium_overlay.png";
-import DiscoElysiumTitleImage from "../Assets/Images/disco_elysium_title.png";
+import DiscoElysiumBackgroundImage from "../Assets/Images/slider/disco_elysium_background.jpg";
+import DiscoElysiumOverlayImage from "../Assets/Images/slider/disco_elysium_overlay.png";
+import DiscoElysiumTitleImage from "../Assets/Images/slider/disco_elysium_title.png";
 
-import TheSinkingCityBackgroundImage from "../Assets/Images/the_sinking_city_background.jpg";
-import TheSinkingCityOverlayImage from "../Assets/Images/the_sinking_city_overlay.png";
-import TheSinkingCityTitleImage from "../Assets/Images/the_sinking_city_title.png";
+import TheSinkingCityBackgroundImage from "../Assets/Images/slider/the_sinking_city_background.jpg";
+import TheSinkingCityOverlayImage from "../Assets/Images/slider/the_sinking_city_overlay.png";
+import TheSinkingCityTitleImage from "../Assets/Images/slider/the_sinking_city_title.png";
 
-import RidersRepublicBackgroundImage from "../Assets/Images/riders_republic_background.jpg";
-import RidersRepublicOverlayImage from "../Assets/Images/riders_republic_overlay.png";
-import RidersRepublicTitleImage from "../Assets/Images/riders_republic_title.png";
+import RidersRepublicBackgroundImage from "../Assets/Images/slider/riders_republic_background.jpg";
+import RidersRepublicOverlayImage from "../Assets/Images/slider/riders_republic_overlay.png";
+import RidersRepublicTitleImage from "../Assets/Images/slider/riders_republic_title.png";
 
-import Tekken7BackgroundImage from "../Assets/Images/tekken_7_background.jpg";
-import Tekken7OverlayImage from "../Assets/Images/tekken_7_overlay.png";
-import Tekken7TitleImage from "../Assets/Images/tekken_7_title.png";
+import Tekken7BackgroundImage from "../Assets/Images/slider/tekken_7_background.jpg";
+import Tekken7OverlayImage from "../Assets/Images/slider/tekken_7_overlay.png";
+import Tekken7TitleImage from "../Assets/Images/slider/tekken_7_title.png";
 
-import Fifa22BackgroundImage from "../Assets/Images/fifa_22_background.jpg";
-import Fifa22OverlayImage from "../Assets/Images/fifa_22_overlay.png";
-import Fifa22TitleImage from "../Assets/Images/fifa_22_title.png";
+import Fifa22BackgroundImage from "../Assets/Images/slider/fifa_22_background.jpg";
+import Fifa22OverlayImage from "../Assets/Images/slider/fifa_22_overlay.png";
+import Fifa22TitleImage from "../Assets/Images/slider/fifa_22_title.png";
 
-import SuperMegaBaseball3BackgroundImage from "../Assets/Images/super_mega_baseball_3_background.jpg";
-import SuperMegaBaseball3OverlayImage from "../Assets/Images/super_mega_baseball_3_overlay.png";
-import SuperMegaBaseball3TitleImage from "../Assets/Images/super_mega_baseball_3_title.png";
+import SuperMegaBaseball3BackgroundImage from "../Assets/Images/slider/super_mega_baseball_3_background.jpg";
+import SuperMegaBaseball3OverlayImage from "../Assets/Images/slider/super_mega_baseball_3_overlay.png";
+import SuperMegaBaseball3TitleImage from "../Assets/Images/slider/super_mega_baseball_3_title.png";
 
-import NierAutomataBackgroundImage from "../Assets/Images/nier_automata_background.jpg";
-import NierAutomataOverlayImage from "../Assets/Images/nier_automata_overlay.png";
-import NierAutomataTitleImage from "../Assets/Images/nier_automata_title.png";
+import NierAutomataBackgroundImage from "../Assets/Images/slider/nier_automata_background.jpg";
+import NierAutomataOverlayImage from "../Assets/Images/slider/nier_automata_overlay.png";
+import NierAutomataTitleImage from "../Assets/Images/slider/nier_automata_title.png";
 
-import MetalGearRisingRevengeanceBackgroundImage from "../Assets/Images/metal_gear_rising_revengeance_background.jpg";
-import MetalGearRisingRevengeanceOverlayImage from "../Assets/Images/metal_gear_rising_revengeance_overlay.png";
-import MetalGearRisingRevengeanceTitleImage from "../Assets/Images/metal_gear_rising_revengeance_title.png";
+import MetalGearRisingRevengeanceBackgroundImage from "../Assets/Images/slider/metal_gear_rising_revengeance_background.jpg";
+import MetalGearRisingRevengeanceOverlayImage from "../Assets/Images/slider/metal_gear_rising_revengeance_overlay.png";
+import MetalGearRisingRevengeanceTitleImage from "../Assets/Images/slider/metal_gear_rising_revengeance_title.png";
 
-import SekiroShadowsDieTwiceBackgroundImage from "../Assets/Images/sekiro_shadows_die_twice_background.jpg";
-import SekiroShadowsDieTwiceOverlayImage from "../Assets/Images/sekiro_shadows_die_twice_overlay.png";
-import SekiroShadowsDieTwiceTitleImage from "../Assets/Images/sekiro_shadows_die_twice_title.png";
+import SekiroShadowsDieTwiceBackgroundImage from "../Assets/Images/slider/sekiro_shadows_die_twice_background.jpg";
+import SekiroShadowsDieTwiceOverlayImage from "../Assets/Images/slider/sekiro_shadows_die_twice_overlay.png";
+import SekiroShadowsDieTwiceTitleImage from "../Assets/Images/slider/sekiro_shadows_die_twice_title.png";
 
-import GodOfWarBackgroundImage from "../Assets/Images/god_of_war_background.jpg";
-import GodOfWarOverlayImage from "../Assets/Images/god_of_war_overlay.png";
-import GodOfWarTitleImage from "../Assets/Images/god_of_war_title.png";
+import GodOfWarBackgroundImage from "../Assets/Images/slider/god_of_war_background.jpg";
+import GodOfWarOverlayImage from "../Assets/Images/slider/god_of_war_overlay.png";
+import GodOfWarTitleImage from "../Assets/Images/slider/god_of_war_title.png";
 
 export const sliderItems: any = {
   all_games: [
