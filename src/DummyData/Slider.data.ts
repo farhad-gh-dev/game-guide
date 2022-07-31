@@ -62,6 +62,10 @@ import NierAutomataBackgroundImage from "../Assets/Images/nier_automata_backgrou
 import NierAutomataOverlayImage from "../Assets/Images/nier_automata_overlay.png";
 import NierAutomataTitleImage from "../Assets/Images/nier_automata_title.png";
 
+import MetalGearRisingRevengeanceBackgroundImage from "../Assets/Images/metal_gear_rising_revengeance_background.jpg";
+import MetalGearRisingRevengeanceOverlayImage from "../Assets/Images/metal_gear_rising_revengeance_overlay.png";
+import MetalGearRisingRevengeanceTitleImage from "../Assets/Images/metal_gear_rising_revengeance_title.png";
+
 import SekiroShadowsDieTwiceBackgroundImage from "../Assets/Images/sekiro_shadows_die_twice_background.jpg";
 import SekiroShadowsDieTwiceOverlayImage from "../Assets/Images/sekiro_shadows_die_twice_overlay.png";
 import SekiroShadowsDieTwiceTitleImage from "../Assets/Images/sekiro_shadows_die_twice_title.png";
@@ -70,7 +74,48 @@ import GodOfWarBackgroundImage from "../Assets/Images/god_of_war_background.jpg"
 import GodOfWarOverlayImage from "../Assets/Images/god_of_war_overlay.png";
 import GodOfWarTitleImage from "../Assets/Images/god_of_war_title.png";
 
-export const sliderItems = {
+export const sliderItems: any = {
+  all_games: [
+    {
+      id: 1,
+      backgroundImageSrc: CyberpunkBackgroundImage,
+      overlayImageSrc: CyberpunkOverlayImage,
+      titleImageSrc: CyberpunkTitleImage,
+      overlayPositionFromRight: 5,
+      titleImageHeight: 50,
+      price: 35.64,
+    },
+    {
+      id: 2,
+      backgroundImageSrc: NierAutomataBackgroundImage,
+      overlayImageSrc: NierAutomataOverlayImage,
+      titleImageSrc: NierAutomataTitleImage,
+      overlayImageHeight: 112,
+      overlayPositionFromRight: 6,
+      titleImageHeight: 60,
+      price: 18.7,
+    },
+    {
+      id: 3,
+      backgroundImageSrc: TheWolfAmongUsBackgroundImage,
+      overlayImageSrc: TheWolfAmongUsOverlayImage,
+      titleImageSrc: TheWolfAmongUsTitleImage,
+      overlayImageHeight: 113,
+      overlayPositionFromRight: -2,
+      titleImageHeight: 75,
+      price: 14.99,
+    },
+    {
+      id: 4,
+      backgroundImageSrc: CrusaderKingsIIIBackgroundImage,
+      overlayImageSrc: CrusaderKingsIIIOverlayImage,
+      titleImageSrc: CrusaderKingsIIITitleImage,
+      overlayImageHeight: 115,
+      overlayPositionFromRight: -1,
+      titleImageHeight: 75,
+      price: 49.99,
+    },
+  ],
   action: [
     {
       id: 1,
@@ -238,27 +283,37 @@ export const sliderItems = {
       overlayImageHeight: 112,
       overlayPositionFromRight: 6,
       titleImageHeight: 60,
-      price: 39.99,
+      price: 18.7,
     },
     {
       id: 2,
+      backgroundImageSrc: MetalGearRisingRevengeanceBackgroundImage,
+      overlayImageSrc: MetalGearRisingRevengeanceOverlayImage,
+      titleImageSrc: MetalGearRisingRevengeanceTitleImage,
+      overlayImageHeight: 120,
+      overlayPositionFromRight: -3,
+      titleImageHeight: 80,
+      price: 19.98,
+    },
+    {
+      id: 3,
       backgroundImageSrc: SekiroShadowsDieTwiceBackgroundImage,
       overlayImageSrc: SekiroShadowsDieTwiceOverlayImage,
       titleImageSrc: SekiroShadowsDieTwiceTitleImage,
       overlayImageHeight: 120,
-      overlayPositionFromRight: 8,
+      overlayPositionFromRight: 9,
       titleImageHeight: 65,
-      price: 39.99,
+      price: 59.99,
     },
     {
-      id: 3,
+      id: 4,
       backgroundImageSrc: GodOfWarBackgroundImage,
       overlayImageSrc: GodOfWarOverlayImage,
       titleImageSrc: GodOfWarTitleImage,
       overlayImageHeight: 118,
       overlayPositionFromRight: 6,
       titleImageHeight: 70,
-      price: 39.99,
+      price: 49.99,
     },
   ],
 };
