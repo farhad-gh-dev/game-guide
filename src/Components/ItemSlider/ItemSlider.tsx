@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyledItemSlider } from "./ItemSlider.styled";
 import { Slider, type SliderItem, SliderControl } from "game-guide-ui-kit";
 import { useSlider } from "./useSlider";
@@ -12,6 +12,10 @@ const ItemSlider: React.FC<ItemSliderProps> = ({ sliderItems }) => {
     sliderItems.length,
     3.5
   );
+
+  useEffect(() => {
+    setActiveSlideNumber(1);
+  }, [sliderItems, setActiveSlideNumber]);
 
   return (
     <StyledItemSlider>

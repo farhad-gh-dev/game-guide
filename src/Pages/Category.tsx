@@ -19,6 +19,7 @@ import { Button, CustomIcon } from "game-guide-ui-kit";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../Hooks/store";
 import { setActiveCategory } from "../Store/appSlice";
+import { replaceSpaceWithUnderscore } from "../Helpers/string";
 
 const CategoryPage: React.FC = () => {
   const { categoryItems, codCollection, offerItems, sliderItems, userProfile } =
@@ -26,14 +27,14 @@ const CategoryPage: React.FC = () => {
 
   const dispatch = useAppDispatch();
   const activeCategory = useAppSelector((store) => store.app.activeCategory);
-  const isLoading = useAppSelector((store) => store.app.loading);
+  // const isLoading = useAppSelector((store) => store.app.loading);
 
   const urlParams = useParams();
   const targetCategory = urlParams.category;
 
   useEffect(() => {
     dispatch(setActiveCategory(targetCategory));
-  }, [targetCategory]);
+  }, [targetCategory, dispatch]);
 
   return (
     <StyledCategoryPage>
@@ -56,7 +57,11 @@ const CategoryPage: React.FC = () => {
               <h1>Loading...</h1>
             ) : (
               <>
-                <ItemSlider sliderItems={sliderItems["all_games"]} />
+                <ItemSlider
+                  sliderItems={
+                    sliderItems[replaceSpaceWithUnderscore(activeCategory)]
+                  }
+                />
                 <TabsPanel tabsData={codCollection} />
               </>
             )}

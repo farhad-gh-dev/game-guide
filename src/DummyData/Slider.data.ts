@@ -274,7 +274,7 @@ export const sliderItems: any = {
       price: 40.87,
     },
   ],
-  hack_and_slash: [
+  "hack_&_slash": [
     {
       id: 1,
       backgroundImageSrc: NierAutomataBackgroundImage,
