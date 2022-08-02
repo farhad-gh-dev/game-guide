@@ -21,11 +21,7 @@ export const appSlice = createSlice({
   reducers: {
     setActiveCategory: (state, action: PayloadAction<string | undefined>) => {
       if (state.activeCategory !== action.payload) {
-        state.loading = true;
         state.activeCategory = action.payload;
-        setTimeout(() => {
-          state.loading = false;
-        }, 300);
       }
     },
   },

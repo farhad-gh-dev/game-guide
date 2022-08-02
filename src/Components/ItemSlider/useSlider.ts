@@ -4,7 +4,7 @@ export const useSlider = (numberOfItems: number, duration: number) => {
   const [activeSlideNumber, setActiveSlideNumber] = useState<number>(1);
 
   useEffect(() => {
-    const sliderTimer = setInterval(() => {
+    const sliderTimer = setTimeout(() => {
       if (activeSlideNumber < numberOfItems) {
         setActiveSlideNumber(activeSlideNumber + 1);
       } else if (activeSlideNumber === numberOfItems) {
@@ -12,7 +12,7 @@ export const useSlider = (numberOfItems: number, duration: number) => {
       }
     }, duration * 1000);
 
-    return () => clearInterval(sliderTimer);
+    return () => clearTimeout(sliderTimer);
   }, [activeSlideNumber, numberOfItems, duration]);
 
   return {
