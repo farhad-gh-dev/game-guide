@@ -6,7 +6,7 @@ afterEach(cleanup);
 
 it("Active slide should be visible and other slides invisible", () => {
   const { getByTestId } = render(
-    <ItemSlider sliderItems={dummyData.sliderItems["action"]} />
+    <ItemSlider sliderItems={dummyData.slidersData["action"]} />
   );
 
   fireEvent.click(getByTestId("indicator-4"));

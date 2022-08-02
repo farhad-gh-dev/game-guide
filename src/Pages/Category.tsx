@@ -18,22 +18,29 @@ import {
 import { Button, CustomIcon } from "game-guide-ui-kit";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../Hooks/store";
-import { setActiveCategory } from "../Store/appSlice";
+import { setActiveCategory, setLoadingStatus } from "../Store/appSlice";
 import { replaceSpaceWithUnderscore } from "../Helpers/string";
 
 const CategoryPage: React.FC = () => {
-  const { categoryItems, codCollection, offerItems, sliderItems, userProfile } =
+  const { categoryItems, codCollection, offerItems, slidersData, userProfile } =
     dummyData;
 
   const dispatch = useAppDispatch();
   const activeCategory = useAppSelector((store) => store.app.activeCategory);
-  // const isLoading = useAppSelector((store) => store.app.loading);
+  const isLoading = useAppSelector((store) => store.app.loading);
 
   const urlParams = useParams();
   const targetCategory = urlParams.category;
+  const targetSliderItems = activeCategory
+    ? slidersData[replaceSpaceWithUnderscore(activeCategory)]
+    : [];
 
   useEffect(() => {
+    dispatch(setLoadingStatus(true));
     dispatch(setActiveCategory(targetCategory));
+    setTimeout(() => {
+      dispatch(setLoadingStatus(false));
+    }, 500);
   }, [targetCategory, dispatch]);
 
   return (
@@ -53,15 +60,11 @@ const CategoryPage: React.FC = () => {
 
         <PageContentContainer>
           <LeftPanel>
-            {!activeCategory ? (
+            {!activeCategory || isLoading ? (
               <h1>Loading...</h1>
             ) : (
               <>
-                <ItemSlider
-                  sliderItems={
-                    sliderItems[replaceSpaceWithUnderscore(activeCategory)]
-                  }
-                />
+                <ItemSlider sliderItems={targetSliderItems} />
                 <TabsPanel tabsData={codCollection} />
               </>
             )}

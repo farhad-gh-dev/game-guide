@@ -74,7 +74,7 @@ import GodOfWarBackgroundImage from "../Assets/Images/slider/god_of_war_backgrou
 import GodOfWarOverlayImage from "../Assets/Images/slider/god_of_war_overlay.png";
 import GodOfWarTitleImage from "../Assets/Images/slider/god_of_war_title.png";
 
-export const sliderItems: any = {
+export const slidersData: any = {
   all_games: [
     {
       id: 1,

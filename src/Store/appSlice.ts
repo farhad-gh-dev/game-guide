@@ -11,7 +11,7 @@ export interface AppState {
 const initialState: AppState = {
   loading: false,
   activeCategory: "",
-  sliderItems: dummyData.sliderItems["action"],
+  sliderItems: [],
 };
 
 export const appSlice = createSlice({
@@ -24,9 +24,16 @@ export const appSlice = createSlice({
         state.activeCategory = action.payload;
       }
     },
+    setLoadingStatus: (state, action: PayloadAction<boolean>) => {
+      if (action.payload) {
+        state.loading = true;
+      } else {
+        state.loading = false;
+      }
+    },
   },
 });
 
-export const { setActiveCategory } = appSlice.actions;
+export const { setActiveCategory, setLoadingStatus } = appSlice.actions;
 
 export default appSlice.reducer;
