@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { type SliderItem } from "game-guide-ui-kit";
-import dummyData from "../DummyData";
 
 export interface AppState {
   loading?: boolean;

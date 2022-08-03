@@ -61,7 +61,17 @@ const CategoryPage: React.FC = () => {
         <PageContentContainer>
           <LeftPanel>
             {!activeCategory || isLoading ? (
-              <h1>Loading...</h1>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  padding: "200px 0",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <h1>Loading...</h1>
+              </div>
             ) : (
               <>
                 <ItemSlider sliderItems={targetSliderItems} />
