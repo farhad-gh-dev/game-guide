@@ -1,4 +1,4 @@
-import CategoryPage from "./Pages/Category";
+import { CategoryPage } from "./Pages";
 import { StyledApp } from "./Style/App.styled";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 

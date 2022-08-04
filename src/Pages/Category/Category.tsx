@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   StyledCategoryPage,
   PageContentContainer,
@@ -6,8 +6,8 @@ import {
   LeftPanel,
   RightPanel,
   AllOffersButtonContainer,
-} from "../Style/CategoryPage.styled";
-import dummyData from "../DummyData";
+} from "./CategoryPage.styled";
+import dummyData from "../../DummyData";
 import {
   TopBar,
   CategoriesPanel,
@@ -15,34 +15,16 @@ import {
   OfferSidebar,
   TabsPanel,
   Footer,
-} from "../Components";
+} from "../../Components";
 import { Loading, Button, CustomIcon } from "game-guide-ui-kit";
-import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../Hooks/store";
-import { setActiveCategory, setLoadingStatus } from "../Store/appSlice";
-import { replaceSpaceWithUnderscore } from "../Helpers/string";
+import { useCategory } from "./useCategory";
 
 const CategoryPage: React.FC = () => {
   const { categoryItems, codCollection, offerItems, slidersData, userProfile } =
     dummyData;
 
-  const dispatch = useAppDispatch();
-  const activeCategory = useAppSelector((store) => store.app.activeCategory);
-  const isLoading = useAppSelector((store) => store.app.loading);
-
-  const urlParams = useParams();
-  const targetCategory = urlParams.category;
-  const targetSliderItems = activeCategory
-    ? slidersData[replaceSpaceWithUnderscore(activeCategory)]
-    : [];
-
-  useEffect(() => {
-    dispatch(setLoadingStatus(true));
-    dispatch(setActiveCategory(targetCategory));
-    setTimeout(() => {
-      dispatch(setLoadingStatus(false));
-    }, 1000);
-  }, [targetCategory, dispatch]);
+  const { isLoading, targetCategory, activeCategory, targetSliderItems } =
+    useCategory(slidersData);
 
   return (
     <StyledCategoryPage>
