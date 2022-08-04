@@ -25,6 +25,21 @@ export const PageContentContainer = styled.div`
   }
 `;
 
+export const LoadingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 170px;
+
+  @media (min-width: ${styles.breakpoint.laptopScreen}px) {
+    height: 360px;
+  }
+
+  @media (min-width: ${styles.breakpoint.largeScreen}px) {
+    height: 515px;
+  }
+`;
+
 export const LeftPanel = styled.div`
   width: 100%;
 

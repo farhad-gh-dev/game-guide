@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {
   StyledCategoryPage,
   PageContentContainer,
+  LoadingContainer,
   LeftPanel,
   RightPanel,
   AllOffersButtonContainer,
@@ -15,7 +16,7 @@ import {
   TabsPanel,
   Footer,
 } from "../Components";
-import { Button, CustomIcon } from "game-guide-ui-kit";
+import { Loading, Button, CustomIcon } from "game-guide-ui-kit";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../Hooks/store";
 import { setActiveCategory, setLoadingStatus } from "../Store/appSlice";
@@ -40,7 +41,7 @@ const CategoryPage: React.FC = () => {
     dispatch(setActiveCategory(targetCategory));
     setTimeout(() => {
       dispatch(setLoadingStatus(false));
-    }, 500);
+    }, 1000);
   }, [targetCategory, dispatch]);
 
   return (
@@ -61,17 +62,9 @@ const CategoryPage: React.FC = () => {
         <PageContentContainer>
           <LeftPanel>
             {!activeCategory || isLoading ? (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  padding: "200px 0",
-                  width: "100%",
-                  height: "100%",
-                }}
-              >
-                <h1>Loading...</h1>
-              </div>
+              <LoadingContainer>
+                <Loading />
+              </LoadingContainer>
             ) : (
               <>
                 <ItemSlider sliderItems={targetSliderItems} />
