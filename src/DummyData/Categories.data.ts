@@ -1,32 +1,32 @@
 export const categoryItems = [
   {
     id: 0,
-    title: "all games",
+    title: "mystery",
     showInSmallScreen: false,
   },
   {
     id: 1,
-    title: "mystery",
-    showInSmallScreen: true,
-  },
-  {
-    id: 2,
     title: "action",
     showInSmallScreen: true,
   },
   {
+    id: 2,
+    title: "all genres",
+    showInSmallScreen: true,
+  },
+  {
     id: 3,
-    title: "strategic",
+    title: "hack & slash",
     showInSmallScreen: true,
   },
   {
     id: 4,
-    title: "sports",
+    title: "strategic",
     showInSmallScreen: false,
   },
   {
     id: 5,
-    title: "hack & slash",
+    title: "sports",
     showInSmallScreen: false,
   },
 ];
