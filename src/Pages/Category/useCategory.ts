@@ -10,7 +10,7 @@ export const useCategory = (slidersData: any) => {
   const isLoading = useAppSelector((store) => store.app.loading);
 
   const urlParams = useParams();
-  const targetCategory = urlParams.category;
+  const targetCategory = urlParams.category?.toLowerCase();
   const targetSliderItems = activeCategory
     ? slidersData[replaceSpaceWithUnderscore(activeCategory)]
     : [];

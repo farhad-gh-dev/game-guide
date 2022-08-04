@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <StyledApp>
         <Routes>
-          <Route path="/" element={<Navigate to="/categories/action" />} />
+          <Route path="/" element={<Navigate to="/categories/all games" />} />
           <Route path="/categories/:category" element={<CategoryPage />} />
 
           <Route path="/404" element={<h1>404 Page</h1>} />
