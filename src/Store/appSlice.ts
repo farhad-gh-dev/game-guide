@@ -5,12 +5,14 @@ export interface AppState {
   loading?: boolean;
   activeCategory?: string | undefined;
   sliderItems?: SliderItem[];
+  shoppingCard?: [];
 }
 
 const initialState: AppState = {
   loading: false,
   activeCategory: "",
   sliderItems: [],
+  shoppingCard: [],
 };
 
 export const appSlice = createSlice({
