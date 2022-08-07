@@ -18,17 +18,28 @@ import {
 } from "../../Components";
 import { Loading, Button, CustomIcon } from "game-guide-ui-kit";
 import { useCategory } from "./useCategory";
+import { useUserInfo } from "../../Hooks/useUserInfo";
 
 const CategoryPage: React.FC = () => {
   const { categoryItems, codCollection, offerItems, slidersData, userProfile } =
     dummyData;
+
+  const {
+    userNotifications,
+    userShoppingCardItems,
+    handleToggleItemInShoppingCard,
+  } = useUserInfo();
 
   const { isLoading, targetCategory, activeCategory, targetSliderItems } =
     useCategory(slidersData);
 
   return (
     <StyledCategoryPage>
-      <TopBar profileData={userProfile} />
+      <TopBar
+        profileData={userProfile}
+        numberOfNotifications={userNotifications?.length}
+        numberOfShoppingCardItems={userShoppingCardItems?.length}
+      />
 
       <main>
         <CategoriesPanel
@@ -56,7 +67,15 @@ const CategoryPage: React.FC = () => {
           </LeftPanel>
 
           <RightPanel>
-            <OfferSidebar offerItems={offerItems} />
+            <OfferSidebar
+              offerItems={[
+                ...offerItems.map((item) => {
+                  item.isInBasket = userShoppingCardItems.includes(item.id);
+                  return item;
+                }),
+              ]}
+              onAddToCard={(id) => handleToggleItemInShoppingCard(id)}
+            />
 
             <AllOffersButtonContainer>
               <Button active={true}>

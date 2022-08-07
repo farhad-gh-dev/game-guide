@@ -5,14 +5,16 @@ export interface AppState {
   loading?: boolean;
   activeCategory?: string | undefined;
   sliderItems?: SliderItem[];
-  shoppingCard?: [];
+  shoppingCardItems: any[];
+  notifications?: any[];
 }
 
 const initialState: AppState = {
   loading: false,
   activeCategory: "",
   sliderItems: [],
-  shoppingCard: [],
+  shoppingCardItems: [],
+  notifications: [1, 2, 3, 4, 5, 6, 7],
 };
 
 export const appSlice = createSlice({
@@ -32,9 +34,25 @@ export const appSlice = createSlice({
         state.loading = false;
       }
     },
+    toggleItemInShoppingCard: (
+      state,
+      action: PayloadAction<string | undefined>
+    ) => {
+      const itemIsInShoppingCard = state.shoppingCardItems?.includes(
+        action.payload
+      );
+      if (!itemIsInShoppingCard) {
+        state.shoppingCardItems = [...state.shoppingCardItems, action.payload];
+      } else {
+        state.shoppingCardItems = state.shoppingCardItems.filter(
+          (itemId) => itemId !== action.payload
+        );
+      }
+    },
   },
 });
 
-export const { setActiveCategory, setLoadingStatus } = appSlice.actions;
+export const { setActiveCategory, setLoadingStatus, toggleItemInShoppingCard } =
+  appSlice.actions;
 
 export default appSlice.reducer;

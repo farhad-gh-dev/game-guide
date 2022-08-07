@@ -6,13 +6,15 @@ import {
 } from "./CustomerInfo.styled";
 import { CustomIcon, Text, Avatar } from "game-guide-ui-kit";
 import helpers from "../../../Helpers";
-import { type Profile } from "../TopBar";
+import { type TopBarProps } from "../TopBar";
 
-export type CustomerInfoProps = {
-  profileData?: Profile;
-};
+export type CustomerInfoProps = TopBarProps;
 
-const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
+const CustomerInfo: React.FC<CustomerInfoProps> = ({
+  profileData,
+  numberOfNotifications,
+  numberOfShoppingCardItems,
+}) => {
   return (
     <StyledCustomerInfo>
       <IconsContainer>
@@ -22,6 +24,7 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
             height="15px"
             heightLaptop="22px"
             heightDesktop="25px"
+            counter={numberOfShoppingCardItems}
           />
         </button>
 
@@ -31,6 +34,7 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({ profileData }) => {
             height="15px"
             heightLaptop="22px"
             heightDesktop="25px"
+            counter={numberOfNotifications}
           />
         </button>
       </IconsContainer>

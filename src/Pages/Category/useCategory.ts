@@ -6,8 +6,8 @@ import { replaceSpaceWithUnderscore } from "../../Helpers/string";
 
 export const useCategory = (slidersData: any) => {
   const dispatch = useAppDispatch();
-  const activeCategory = useAppSelector((store) => store.app.activeCategory);
   const isLoading = useAppSelector((store) => store.app.loading);
+  const activeCategory = useAppSelector((store) => store.app.activeCategory);
 
   const urlParams = useParams();
   const targetCategory = urlParams.category?.toLowerCase();

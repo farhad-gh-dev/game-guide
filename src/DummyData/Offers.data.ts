@@ -3,7 +3,7 @@ import ResidentEvil8Image from "../Assets/Images/resident_evil_8_offer.jpg";
 
 export const offerItems = [
   {
-    id: "0",
+    id: "offer-0",
     title: "Elden Ring",
     imageSrc: EldenRingImage,
     url: "/",
@@ -15,7 +15,7 @@ export const offerItems = [
     ],
   },
   {
-    id: "1",
+    id: "offer-1",
     title: "Resident Evil 8",
     imageSrc: ResidentEvil8Image,
     url: "/",
