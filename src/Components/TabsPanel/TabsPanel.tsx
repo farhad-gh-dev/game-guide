@@ -18,11 +18,11 @@ const TabsPanel: React.FC<TabsPanelProps> = ({ tabsData }) => {
       <Tabs
         tabItems={[
           {
-            tabTitle: "Collection Details",
+            tabTitle: "games on sale",
             tabContent: <ComingSoon />,
           },
           {
-            tabTitle: "Available Versions",
+            tabTitle: "top sellers",
             tabContent: (
               <AvailableVersions
                 tabContentData={tabsData?.available_versions}
@@ -30,11 +30,11 @@ const TabsPanel: React.FC<TabsPanelProps> = ({ tabsData }) => {
             ),
           },
           {
-            tabTitle: "Installation Guide",
+            tabTitle: "new release",
             tabContent: <ComingSoon />,
           },
           {
-            tabTitle: "Comments",
+            tabTitle: "comments",
             tabContent: <ComingSoon />,
           },
         ]}
