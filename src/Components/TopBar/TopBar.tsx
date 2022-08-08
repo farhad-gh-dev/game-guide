@@ -18,13 +18,13 @@ export type Profile = {
 export type TopBarProps = {
   profileData?: Profile;
   numberOfNotifications?: number;
-  numberOfShoppingCardItems?: number;
+  numberOfShoppingCartItems?: number;
 };
 
 const TopBar: React.FC<TopBarProps> = ({
   profileData,
   numberOfNotifications,
-  numberOfShoppingCardItems,
+  numberOfShoppingCartItems,
 }) => {
   return (
     <StyledTopBar>
@@ -39,7 +39,7 @@ const TopBar: React.FC<TopBarProps> = ({
         <CustomerInfo
           profileData={profileData}
           numberOfNotifications={numberOfNotifications}
-          numberOfShoppingCardItems={numberOfShoppingCardItems}
+          numberOfShoppingCartItems={numberOfShoppingCartItems}
         />
       </DesktopContainer>
 

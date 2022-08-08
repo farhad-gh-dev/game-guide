@@ -13,16 +13,17 @@ export type CategoryItem = {
   id?: number;
   title?: string;
   showInSmallScreen?: boolean;
-  active?: boolean;
 };
 
 export type CategoriesPanelProps = {
   categoriesData?: CategoryItem[];
+  activeCategoryTitle?: string;
   onSearch?: (searchTerm: string) => void;
 };
 
 const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
   categoriesData,
+  activeCategoryTitle,
   onSearch = (searchTerm) => console.log(searchTerm),
 }) => {
   return (
@@ -44,7 +45,10 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
           {categoriesData?.map((i) => (
             <ButtonWrapper key={i.id} show={i.showInSmallScreen}>
               <Link to={`/categories/${i.title}`}>
-                <Button active={i.active} title={i.title}>
+                <Button
+                  active={activeCategoryTitle === i.title}
+                  title={i.title}
+                >
                   {i.title}
                 </Button>
               </Link>

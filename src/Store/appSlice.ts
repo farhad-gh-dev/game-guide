@@ -1,19 +1,36 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { type SliderItem } from "game-guide-ui-kit";
+import dummyData, {
+  type categoryItemsType,
+  type categoryTabsType,
+  type offerItemsType,
+  type slidersDataType,
+  type UserInfoType,
+} from "../DummyData";
 
 export interface AppState {
   loading?: boolean;
+  userProfileInfo?: UserInfoType;
+  categoryItems?: categoryItemsType;
+  slidersData?: slidersDataType;
+  offerItems?: offerItemsType;
+  collectionItems?: categoryTabsType;
   activeCategory?: string | undefined;
   sliderItems?: SliderItem[];
-  shoppingCardItems: any[];
+  shoppingCartItems: any[];
   notifications?: any[];
 }
 
 const initialState: AppState = {
   loading: false,
+  userProfileInfo: dummyData.userProfile,
+  categoryItems: dummyData.categoryItems,
+  slidersData: dummyData.slidersData,
+  offerItems: dummyData.offerItems,
+  collectionItems: dummyData.categoryTabs,
   activeCategory: "",
   sliderItems: [],
-  shoppingCardItems: [],
+  shoppingCartItems: [],
   notifications: [1, 2, 3, 4, 5, 6, 7],
 };
 
@@ -34,17 +51,17 @@ export const appSlice = createSlice({
         state.loading = false;
       }
     },
-    toggleItemInShoppingCard: (
+    toggleItemInShoppingCart: (
       state,
       action: PayloadAction<string | undefined>
     ) => {
-      const itemIsInShoppingCard = state.shoppingCardItems?.includes(
+      const itemIsInShoppingCart = state.shoppingCartItems?.includes(
         action.payload
       );
-      if (!itemIsInShoppingCard) {
-        state.shoppingCardItems = [...state.shoppingCardItems, action.payload];
+      if (!itemIsInShoppingCart) {
+        state.shoppingCartItems = [...state.shoppingCartItems, action.payload];
       } else {
-        state.shoppingCardItems = state.shoppingCardItems.filter(
+        state.shoppingCartItems = state.shoppingCartItems.filter(
           (itemId) => itemId !== action.payload
         );
       }
@@ -52,7 +69,7 @@ export const appSlice = createSlice({
   },
 });
 
-export const { setActiveCategory, setLoadingStatus, toggleItemInShoppingCard } =
+export const { setActiveCategory, setLoadingStatus, toggleItemInShoppingCart } =
   appSlice.actions;
 
 export default appSlice.reducer;

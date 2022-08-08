@@ -10,11 +10,9 @@ import BlackOps4Image from "../Assets/Images/cod_black_ops_4_poster.jpg";
 import ModernWarfare2019Image from "../Assets/Images/cod_modern_warfare_2019_poster.jpg";
 import BlackOpsColdWarImage from "../Assets/Images/cod_black_ops_cold_war_poster.jpg";
 
-export const codCollection = {
-  collection_details: undefined,
-  installation_guide: undefined,
-  comments: undefined,
-  available_versions: [
+export const categoryTabs = {
+  games_on_sale: undefined,
+  top_sellers: [
     {
       id: 0,
       title: "Modern Warfare 2007",
@@ -82,4 +80,6 @@ export const codCollection = {
       imageSrc: BlackOpsColdWarImage,
     },
   ],
+  new_release: undefined,
+  coming_soon: undefined,
 };

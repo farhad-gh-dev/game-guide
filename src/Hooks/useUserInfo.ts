@@ -1,20 +1,22 @@
 import { useAppDispatch, useAppSelector } from "./store";
-import { toggleItemInShoppingCard } from "../Store/appSlice";
+import { toggleItemInShoppingCart } from "../Store/appSlice";
 
 export const useUserInfo = () => {
   const dispatch = useAppDispatch();
+  const userProfileInfo = useAppSelector((store) => store.app.userProfileInfo);
   const userNotifications = useAppSelector((store) => store.app.notifications);
-  const userShoppingCardItems = useAppSelector(
-    (store) => store.app.shoppingCardItems
+  const userShoppingCartItems = useAppSelector(
+    (store) => store.app.shoppingCartItems
   );
 
-  const handleToggleItemInShoppingCard = (id?: string) => {
-    dispatch(toggleItemInShoppingCard(id));
+  const handleToggleItemInShoppingCart = (id?: string) => {
+    dispatch(toggleItemInShoppingCart(id));
   };
 
   return {
+    userProfileInfo,
     userNotifications,
-    userShoppingCardItems,
-    handleToggleItemInShoppingCard,
+    userShoppingCartItems,
+    handleToggleItemInShoppingCart,
   };
 };

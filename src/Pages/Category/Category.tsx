@@ -1,4 +1,6 @@
 import React from "react";
+import { useCategory } from "./useCategory";
+import { useUserInfo } from "../../Hooks/useUserInfo";
 import {
   StyledCategoryPage,
   PageContentContainer,
@@ -7,7 +9,6 @@ import {
   RightPanel,
   AllOffersButtonContainer,
 } from "./CategoryPage.styled";
-import dummyData from "../../DummyData";
 import {
   TopBar,
   CategoriesPanel,
@@ -17,38 +18,37 @@ import {
   Footer,
 } from "../../Components";
 import { Loading, Button, CustomIcon } from "game-guide-ui-kit";
-import { useCategory } from "./useCategory";
-import { useUserInfo } from "../../Hooks/useUserInfo";
 
 const CategoryPage: React.FC = () => {
-  const { categoryItems, codCollection, offerItems, slidersData, userProfile } =
-    dummyData;
-
   const {
+    userProfileInfo,
     userNotifications,
-    userShoppingCardItems,
-    handleToggleItemInShoppingCard,
+    userShoppingCartItems,
+    handleToggleItemInShoppingCart,
   } = useUserInfo();
 
-  const { isLoading, targetCategory, activeCategory, targetSliderItems } =
-    useCategory(slidersData);
+  const {
+    isLoading,
+    categoryItems,
+    targetCategory,
+    activeCategory,
+    targetSliderItems,
+    offerItems,
+    collectionItems,
+  } = useCategory(userShoppingCartItems);
 
   return (
     <StyledCategoryPage>
       <TopBar
-        profileData={userProfile}
+        profileData={userProfileInfo}
         numberOfNotifications={userNotifications?.length}
-        numberOfShoppingCardItems={userShoppingCardItems?.length}
+        numberOfShoppingCartItems={userShoppingCartItems?.length}
       />
 
       <main>
         <CategoriesPanel
-          categoriesData={categoryItems.map((i) => {
-            return {
-              ...i,
-              active: i.title === targetCategory,
-            };
-          })}
+          categoriesData={categoryItems}
+          activeCategoryTitle={targetCategory}
           onSearch={(searchTerm) => console.log(searchTerm)}
         />
 
@@ -61,20 +61,15 @@ const CategoryPage: React.FC = () => {
             ) : (
               <>
                 <ItemSlider sliderItems={targetSliderItems} />
-                <TabsPanel tabsData={codCollection} />
+                <TabsPanel tabsData={collectionItems} />
               </>
             )}
           </LeftPanel>
 
           <RightPanel>
             <OfferSidebar
-              offerItems={[
-                ...offerItems.map((item) => {
-                  item.isInBasket = userShoppingCardItems.includes(item.id);
-                  return item;
-                }),
-              ]}
-              onAddToCard={(id) => handleToggleItemInShoppingCard(id)}
+              offerItems={offerItems}
+              onAddToCart={(id) => handleToggleItemInShoppingCart(id)}
             />
 
             <AllOffersButtonContainer>

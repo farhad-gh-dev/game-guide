@@ -13,18 +13,18 @@ export type CustomerInfoProps = TopBarProps;
 const CustomerInfo: React.FC<CustomerInfoProps> = ({
   profileData,
   numberOfNotifications,
-  numberOfShoppingCardItems,
+  numberOfShoppingCartItems,
 }) => {
   return (
     <StyledCustomerInfo>
       <IconsContainer>
-        <button onClick={() => console.log("clicked on shopping-card")}>
+        <button onClick={() => console.log("clicked on shopping-cart")}>
           <CustomIcon
             type="shopping-card"
             height="15px"
             heightLaptop="22px"
             heightDesktop="25px"
-            counter={numberOfShoppingCardItems}
+            counter={numberOfShoppingCartItems}
           />
         </button>
 
