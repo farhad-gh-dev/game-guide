@@ -5,9 +5,13 @@ import { useSlider } from "./useSlider";
 
 export type ItemSliderProps = {
   sliderItems: SliderItem[];
+  onToggleInCart?: (id?: string) => void;
 };
 
-const ItemSlider: React.FC<ItemSliderProps> = ({ sliderItems }) => {
+const ItemSlider: React.FC<ItemSliderProps> = ({
+  sliderItems,
+  onToggleInCart = () => {},
+}) => {
   const { activeSlideNumber, setActiveSlideNumber } = useSlider(
     sliderItems.length,
     3.5
@@ -23,7 +27,7 @@ const ItemSlider: React.FC<ItemSliderProps> = ({ sliderItems }) => {
         className="slider-panels"
         sliderItems={sliderItems}
         activeSlide={activeSlideNumber}
-        onBuyHandler={(i) => console.log(i)}
+        onBuyHandler={(id) => onToggleInCart(id)}
       />
 
       <div className="slider-control-container">

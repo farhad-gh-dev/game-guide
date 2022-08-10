@@ -26,6 +26,13 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     };
   });
 
+  const formattedTargetSliderItems = targetSliderItems?.map((item: any) => {
+    return {
+      ...item,
+      isInBasket: userShoppingCartItems?.includes(item.id),
+    };
+  });
+
   useEffect(() => {
     dispatch(setLoadingStatus(true));
     dispatch(setActiveCategory(targetCategory));
@@ -39,7 +46,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     categoryItems,
     targetCategory,
     activeCategory,
-    targetSliderItems,
+    targetSliderItems: formattedTargetSliderItems,
     offerItems: formattedOfferItems,
     collectionItems,
   };

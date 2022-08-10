@@ -8,12 +8,12 @@ import { Heading, OfferCard, offerItem } from "game-guide-ui-kit";
 
 export type OfferSidebarProps = {
   offerItems?: offerItem[];
-  onAddToCart?: (id?: string) => void;
+  onToggleInCart?: (id?: string) => void;
 };
 
 const OfferSidebar: React.FC<OfferSidebarProps> = ({
   offerItems = [],
-  onAddToCart = () => {},
+  onToggleInCart = () => {},
 }) => {
   return (
     <StyledOfferSidebar>
@@ -27,7 +27,9 @@ const OfferSidebar: React.FC<OfferSidebarProps> = ({
             <OfferCard
               key={item.id}
               itemData={item}
-              onAddToCart={(itemData: offerItem) => onAddToCart(itemData.id)}
+              onToggleInCart={(itemData: offerItem) =>
+                onToggleInCart(itemData.id)
+              }
             />
           );
         })}

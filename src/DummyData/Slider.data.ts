@@ -77,7 +77,7 @@ import GodOfWarTitleImage from "../Assets/Images/slider/god_of_war_title.png";
 export const slidersData: any = {
   all_genres: [
     {
-      id: 1,
+      id: "50ae7a3b-2e63-47e1-828c-eb1486ce221e",
       backgroundImageSrc: CyberpunkBackgroundImage,
       overlayImageSrc: CyberpunkOverlayImage,
       titleImageSrc: CyberpunkTitleImage,
@@ -86,7 +86,7 @@ export const slidersData: any = {
       price: 35.64,
     },
     {
-      id: 2,
+      id: "809e7278-9b8e-47aa-98f3-a28321337c02",
       backgroundImageSrc: NierAutomataBackgroundImage,
       overlayImageSrc: NierAutomataOverlayImage,
       titleImageSrc: NierAutomataTitleImage,
@@ -96,7 +96,7 @@ export const slidersData: any = {
       price: 18.7,
     },
     {
-      id: 3,
+      id: "286aa7fb-7f2d-47ad-b1d2-8eb08ad193aa",
       backgroundImageSrc: TheWolfAmongUsBackgroundImage,
       overlayImageSrc: TheWolfAmongUsOverlayImage,
       titleImageSrc: TheWolfAmongUsTitleImage,
@@ -106,7 +106,7 @@ export const slidersData: any = {
       price: 14.99,
     },
     {
-      id: 4,
+      id: "170c6f10-6715-4e2a-998d-74f71a006165",
       backgroundImageSrc: CrusaderKingsIIIBackgroundImage,
       overlayImageSrc: CrusaderKingsIIIOverlayImage,
       titleImageSrc: CrusaderKingsIIITitleImage,
@@ -118,7 +118,7 @@ export const slidersData: any = {
   ],
   action: [
     {
-      id: 1,
+      id: "fe00ee66-7cb1-4e7f-b98a-4dbae4b38629",
       backgroundImageSrc: CyberpunkBackgroundImage,
       overlayImageSrc: CyberpunkOverlayImage,
       titleImageSrc: CyberpunkTitleImage,
@@ -127,7 +127,7 @@ export const slidersData: any = {
       price: 35.64,
     },
     {
-      id: 2,
+      id: "422b778e-9444-4127-9fb6-ada892d96d0d",
       backgroundImageSrc: WitcherBackgroundImage,
       overlayImageSrc: WitcherOverlayImage,
       titleImageSrc: WitcherTitleImage,
@@ -137,7 +137,7 @@ export const slidersData: any = {
       price: 49.99,
     },
     {
-      id: 3,
+      id: "64c9bae6-39d2-42fd-aae6-8175f84a02a9",
       backgroundImageSrc: ValorantBackgroundImage,
       overlayImageSrc: ValorantOverlayImage,
       titleImageSrc: ValorantTitleImage,
@@ -147,7 +147,7 @@ export const slidersData: any = {
       price: 0,
     },
     {
-      id: 4,
+      id: "86f0ecd6-5e48-4d6f-bd84-236c83d62eed",
       backgroundImageSrc: BloodHuntBackgroundImage,
       overlayImageSrc: BloodHuntOverlayImage,
       titleImageSrc: BloodHuntTitleImage,
@@ -159,7 +159,7 @@ export const slidersData: any = {
   ],
   strategic: [
     {
-      id: 1,
+      id: "f06a5ecf-dd57-4dea-b9fb-9b101b0fb7a7",
       backgroundImageSrc: CrusaderKingsIIIBackgroundImage,
       overlayImageSrc: CrusaderKingsIIIOverlayImage,
       titleImageSrc: CrusaderKingsIIITitleImage,
@@ -169,7 +169,7 @@ export const slidersData: any = {
       price: 49.99,
     },
     {
-      id: 2,
+      id: "7a6ce9e9-9c70-49e9-ada9-217d9946326d",
       backgroundImageSrc: CivilizationVIBackgroundImage,
       overlayImageSrc: CivilizationVIOverlayImage,
       titleImageSrc: CivilizationVITitleImage,
@@ -179,7 +179,7 @@ export const slidersData: any = {
       price: 59.99,
     },
     {
-      id: 3,
+      id: "98d5926e-6c7d-4561-b802-f400f0a48ce3",
       backgroundImageSrc: StarCraftIIBackgroundImage,
       overlayImageSrc: StarCraftIIOverlayImage,
       titleImageSrc: StarCraftIITitleImage,
@@ -189,7 +189,7 @@ export const slidersData: any = {
       price: 0,
     },
     {
-      id: 4,
+      id: "e93e0666-02b6-4f1f-bf8c-fa0a8a5bcf4c",
       backgroundImageSrc: XCOM2BackgroundImage,
       overlayImageSrc: XCOM2OverlayImage,
       titleImageSrc: XCOM2TitleImage,
@@ -201,7 +201,7 @@ export const slidersData: any = {
   ],
   mystery: [
     {
-      id: 1,
+      id: "81d31e99-dd99-4ec1-8eed-d3991e7eee0c",
       backgroundImageSrc: TheWolfAmongUsBackgroundImage,
       overlayImageSrc: TheWolfAmongUsOverlayImage,
       titleImageSrc: TheWolfAmongUsTitleImage,
@@ -211,7 +211,7 @@ export const slidersData: any = {
       price: 14.99,
     },
     {
-      id: 2,
+      id: "f94e98fd-2fe8-4454-94b1-770ef0c717ff",
       backgroundImageSrc: DiscoElysiumBackgroundImage,
       overlayImageSrc: DiscoElysiumOverlayImage,
       titleImageSrc: DiscoElysiumTitleImage,
@@ -221,7 +221,7 @@ export const slidersData: any = {
       price: 39.99,
     },
     {
-      id: 3,
+      id: "c44fb7a2-a59c-4690-8661-866aa5d7cfe5",
       backgroundImageSrc: TheSinkingCityBackgroundImage,
       overlayImageSrc: TheSinkingCityOverlayImage,
       titleImageSrc: TheSinkingCityTitleImage,
@@ -233,7 +233,7 @@ export const slidersData: any = {
   ],
   sports: [
     {
-      id: 1,
+      id: "4d4b0cd6-a404-4beb-8e6e-b00eca2e0384",
       backgroundImageSrc: RidersRepublicBackgroundImage,
       overlayImageSrc: RidersRepublicOverlayImage,
       titleImageSrc: RidersRepublicTitleImage,
@@ -243,7 +243,7 @@ export const slidersData: any = {
       price: 37.65,
     },
     {
-      id: 2,
+      id: "1568d58a-8529-488f-9527-d0955261c057",
       backgroundImageSrc: Tekken7BackgroundImage,
       overlayImageSrc: Tekken7OverlayImage,
       titleImageSrc: Tekken7TitleImage,
@@ -253,7 +253,7 @@ export const slidersData: any = {
       price: 0,
     },
     {
-      id: 3,
+      id: "f9678f25-b8f7-4672-9010-3bbd547466b8",
       backgroundImageSrc: Fifa22BackgroundImage,
       overlayImageSrc: Fifa22OverlayImage,
       titleImageSrc: Fifa22TitleImage,
@@ -262,9 +262,8 @@ export const slidersData: any = {
       titleImageHeight: 60,
       price: 0,
     },
-
     {
-      id: 4,
+      id: "d9c5af61-495d-40f3-8512-4bea9a0634e2",
       backgroundImageSrc: SuperMegaBaseball3BackgroundImage,
       overlayImageSrc: SuperMegaBaseball3OverlayImage,
       titleImageSrc: SuperMegaBaseball3TitleImage,
@@ -276,7 +275,7 @@ export const slidersData: any = {
   ],
   "hack_&_slash": [
     {
-      id: 1,
+      id: "ae6dfa49-9680-42cb-a2dd-3e787af394a0",
       backgroundImageSrc: NierAutomataBackgroundImage,
       overlayImageSrc: NierAutomataOverlayImage,
       titleImageSrc: NierAutomataTitleImage,
@@ -286,7 +285,7 @@ export const slidersData: any = {
       price: 18.7,
     },
     {
-      id: 2,
+      id: "bc55722e-4c4e-4e37-90cf-323d563707f7",
       backgroundImageSrc: SekiroShadowsDieTwiceBackgroundImage,
       overlayImageSrc: SekiroShadowsDieTwiceOverlayImage,
       titleImageSrc: SekiroShadowsDieTwiceTitleImage,
@@ -296,7 +295,7 @@ export const slidersData: any = {
       price: 59.99,
     },
     {
-      id: 3,
+      id: "acae4f7c-815c-4233-a709-37b76e439134",
       backgroundImageSrc: GodOfWarBackgroundImage,
       overlayImageSrc: GodOfWarOverlayImage,
       titleImageSrc: GodOfWarTitleImage,
@@ -306,7 +305,7 @@ export const slidersData: any = {
       price: 49.99,
     },
     {
-      id: 4,
+      id: "ab518692-ac6f-435d-ad33-f250f1aef023",
       backgroundImageSrc: MetalGearRisingRevengeanceBackgroundImage,
       overlayImageSrc: MetalGearRisingRevengeanceOverlayImage,
       titleImageSrc: MetalGearRisingRevengeanceTitleImage,

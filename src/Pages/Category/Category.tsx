@@ -60,7 +60,10 @@ const CategoryPage: React.FC = () => {
               </LoadingContainer>
             ) : (
               <>
-                <ItemSlider sliderItems={targetSliderItems} />
+                <ItemSlider
+                  sliderItems={targetSliderItems}
+                  // onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
+                />
                 <TabsPanel tabsData={collectionItems} />
               </>
             )}
@@ -69,7 +72,7 @@ const CategoryPage: React.FC = () => {
           <RightPanel>
             <OfferSidebar
               offerItems={offerItems}
-              onAddToCart={(id) => handleToggleItemInShoppingCart(id)}
+              onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
             />
 
             <AllOffersButtonContainer>
