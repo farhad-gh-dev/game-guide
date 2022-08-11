@@ -62,7 +62,8 @@ const CategoryPage: React.FC = () => {
               <>
                 <ItemSlider
                   sliderItems={targetSliderItems}
-                  // onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
+                  activeCategory={activeCategory}
+                  onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
                 />
                 <TabsPanel tabsData={collectionItems} />
               </>
