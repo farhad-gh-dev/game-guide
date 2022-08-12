@@ -118,15 +118,6 @@ export const slidersData: any = {
   ],
   action: [
     {
-      id: "fe00ee66-7cb1-4e7f-b98a-4dbae4b38629",
-      backgroundImageSrc: CyberpunkBackgroundImage,
-      overlayImageSrc: CyberpunkOverlayImage,
-      titleImageSrc: CyberpunkTitleImage,
-      overlayPositionFromRight: 5,
-      titleImageHeight: 50,
-      price: 35.64,
-    },
-    {
       id: "422b778e-9444-4127-9fb6-ada892d96d0d",
       backgroundImageSrc: WitcherBackgroundImage,
       overlayImageSrc: WitcherOverlayImage,
@@ -135,6 +126,15 @@ export const slidersData: any = {
       overlayPositionFromRight: 6,
       titleImageHeight: 70,
       price: 49.99,
+    },
+    {
+      id: "fe00ee66-7cb1-4e7f-b98a-4dbae4b38629",
+      backgroundImageSrc: CyberpunkBackgroundImage,
+      overlayImageSrc: CyberpunkOverlayImage,
+      titleImageSrc: CyberpunkTitleImage,
+      overlayPositionFromRight: 5,
+      titleImageHeight: 50,
+      price: 35.64,
     },
     {
       id: "64c9bae6-39d2-42fd-aae6-8175f84a02a9",
