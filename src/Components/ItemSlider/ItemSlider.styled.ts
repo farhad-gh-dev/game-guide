@@ -6,6 +6,7 @@ export const StyledItemSlider = styled.div`
   align-items: stretch;
   margin-top: 40px;
   margin-bottom: 35px;
+  z-index: 1;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
     margin-top: 60px;
