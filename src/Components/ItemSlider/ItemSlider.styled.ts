@@ -25,3 +25,7 @@ export const StyledItemSlider = styled.div`
     z-index: 10;
   }
 `;
+
+export const SliderContainer = styled.div`
+  width: 100%;
+`;

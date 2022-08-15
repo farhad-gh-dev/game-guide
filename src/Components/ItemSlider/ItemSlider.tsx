@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { StyledItemSlider } from "./ItemSlider.styled";
+import { StyledItemSlider, SliderContainer } from "./ItemSlider.styled";
 import { Slider, type SliderItem, SliderControl } from "game-guide-ui-kit";
 import { useSlider } from "./useSlider";
 
@@ -14,10 +14,12 @@ const ItemSlider: React.FC<ItemSliderProps> = ({
   activeCategory,
   onToggleInCart = () => {},
 }) => {
-  const { activeSlideNumber, setActiveSlideNumber } = useSlider(
-    sliderItems.length,
-    3.5
-  );
+  const {
+    activeSlideNumber,
+    overlayImage3DOffsets,
+    setActiveSlideNumber,
+    handleOverlayImage3DEffect,
+  } = useSlider(sliderItems.length, 3.5);
 
   useEffect(() => {
     setActiveSlideNumber(1);
@@ -25,12 +27,18 @@ const ItemSlider: React.FC<ItemSliderProps> = ({
 
   return (
     <StyledItemSlider>
-      <Slider
-        className="slider-panels"
-        sliderItems={sliderItems}
-        activeSlide={activeSlideNumber}
-        onToggleInCart={(id) => onToggleInCart(id)}
-      />
+      <SliderContainer onMouseMove={(e) => handleOverlayImage3DEffect(e)}>
+        <Slider
+          className="slider-panels"
+          sliderItems={sliderItems}
+          activeSlide={activeSlideNumber}
+          overlayImage3DOffsets={[
+            overlayImage3DOffsets[0],
+            overlayImage3DOffsets[1],
+          ]}
+          onToggleInCart={(id) => onToggleInCart(id)}
+        />
+      </SliderContainer>
 
       <div className="slider-control-container">
         <SliderControl
