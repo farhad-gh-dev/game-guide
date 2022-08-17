@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "./Store";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyle } from "game-guide-ui-kit";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,8 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <GlobalStyle />
-      <App />
+      <BrowserRouter>
+        <GlobalStyle />
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
