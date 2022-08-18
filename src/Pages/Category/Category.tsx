@@ -77,7 +77,7 @@ const CategoryPage: React.FC = () => {
             />
 
             <AllOffersButtonContainer>
-              <Button active={true}>
+              <Button variant="primary">
                 <div className="button-content">
                   See All
                   <CustomIcon

@@ -46,7 +46,9 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
             <ButtonWrapper key={i.id} show={i.showInSmallScreen}>
               <Link to={`/categories/${i.title}`}>
                 <Button
-                  active={activeCategoryTitle === i.title}
+                  variant={
+                    activeCategoryTitle === i.title ? "primary" : "default"
+                  }
                   title={i.title}
                 >
                   {i.title}
