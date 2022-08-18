@@ -8,18 +8,14 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   const dispatch = useAppDispatch();
   const slidersData = useAppSelector((store) => store.app.slidersData);
   const activeCategory = useAppSelector((store) => store.app.activeCategory);
-
-  const urlParams = useParams();
-  const navigate = useNavigate();
-  const targetCategory = urlParams.category?.toLowerCase();
-  !Object.keys(slidersData).includes(
-    replaceSpaceWithUnderscore(activeCategory)
-  ) && navigate("/404");
-
   const isLoading = useAppSelector((store) => store.app.loading);
   const categoryItems = useAppSelector((store) => store.app.categoryItems);
   const offerItems = useAppSelector((store) => store.app.offerItems);
   const collectionItems = useAppSelector((store) => store.app.collectionItems);
+
+  const navigate = useNavigate();
+  const urlParams = useParams();
+  const targetCategory = urlParams.category?.toLowerCase();
 
   const targetSliderItems =
     slidersData[replaceSpaceWithUnderscore(activeCategory)];
@@ -39,6 +35,11 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   });
 
   useEffect(() => {
+    //Check if category is valid
+    !Object.keys(slidersData).includes(
+      replaceSpaceWithUnderscore(targetCategory)
+    ) && navigate("/404");
+
     dispatch(setLoadingStatus(true));
     dispatch(setActiveCategory(targetCategory));
     setTimeout(() => {
