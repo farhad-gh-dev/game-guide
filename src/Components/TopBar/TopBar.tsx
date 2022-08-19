@@ -34,7 +34,9 @@ const TopBar: React.FC<TopBarProps> = ({
           <BrandLogo />
         </a>
 
-        <NavbarContent />
+        <nav>
+          <NavbarContent />
+        </nav>
 
         <CustomerInfo
           profileData={profileData}
@@ -45,7 +47,9 @@ const TopBar: React.FC<TopBarProps> = ({
 
       <MobileNavbarContainer>
         <SearchBar />
-        <NavbarContent />
+        <nav>
+          <NavbarContent />
+        </nav>
       </MobileNavbarContainer>
     </StyledTopBar>
   );

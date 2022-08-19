@@ -78,6 +78,7 @@ export const slidersData: any = {
   all_genres: [
     {
       id: "50ae7a3b-2e63-47e1-828c-eb1486ce221e",
+      title: "cyberpunk 2077",
       backgroundImageSrc: CyberpunkBackgroundImage,
       overlayImageSrc: CyberpunkOverlayImage,
       titleImageSrc: CyberpunkTitleImage,
@@ -88,6 +89,7 @@ export const slidersData: any = {
     },
     {
       id: "809e7278-9b8e-47aa-98f3-a28321337c02",
+      title: "nier automata",
       backgroundImageSrc: NierAutomataBackgroundImage,
       overlayImageSrc: NierAutomataOverlayImage,
       titleImageSrc: NierAutomataTitleImage,
@@ -98,6 +100,7 @@ export const slidersData: any = {
     },
     {
       id: "286aa7fb-7f2d-47ad-b1d2-8eb08ad193aa",
+      title: "the wolf among us",
       backgroundImageSrc: TheWolfAmongUsBackgroundImage,
       overlayImageSrc: TheWolfAmongUsOverlayImage,
       titleImageSrc: TheWolfAmongUsTitleImage,
@@ -108,6 +111,7 @@ export const slidersData: any = {
     },
     {
       id: "170c6f10-6715-4e2a-998d-74f71a006165",
+      title: "crusader kings III",
       backgroundImageSrc: CrusaderKingsIIIBackgroundImage,
       overlayImageSrc: CrusaderKingsIIIOverlayImage,
       titleImageSrc: CrusaderKingsIIITitleImage,
@@ -120,6 +124,7 @@ export const slidersData: any = {
   action: [
     {
       id: "422b778e-9444-4127-9fb6-ada892d96d0d",
+      title: "witcher",
       backgroundImageSrc: WitcherBackgroundImage,
       overlayImageSrc: WitcherOverlayImage,
       titleImageSrc: WitcherTitleImage,
@@ -130,6 +135,7 @@ export const slidersData: any = {
     },
     {
       id: "fe00ee66-7cb1-4e7f-b98a-4dbae4b38629",
+      title: "cyberpunk 2077",
       backgroundImageSrc: CyberpunkBackgroundImage,
       overlayImageSrc: CyberpunkOverlayImage,
       titleImageSrc: CyberpunkTitleImage,
@@ -140,6 +146,7 @@ export const slidersData: any = {
     },
     {
       id: "64c9bae6-39d2-42fd-aae6-8175f84a02a9",
+      title: "valorant",
       backgroundImageSrc: ValorantBackgroundImage,
       overlayImageSrc: ValorantOverlayImage,
       titleImageSrc: ValorantTitleImage,
@@ -150,6 +157,7 @@ export const slidersData: any = {
     },
     {
       id: "86f0ecd6-5e48-4d6f-bd84-236c83d62eed",
+      title: "bloodhunt",
       backgroundImageSrc: BloodHuntBackgroundImage,
       overlayImageSrc: BloodHuntOverlayImage,
       titleImageSrc: BloodHuntTitleImage,
@@ -161,17 +169,8 @@ export const slidersData: any = {
   ],
   strategic: [
     {
-      id: "f06a5ecf-dd57-4dea-b9fb-9b101b0fb7a7",
-      backgroundImageSrc: CrusaderKingsIIIBackgroundImage,
-      overlayImageSrc: CrusaderKingsIIIOverlayImage,
-      titleImageSrc: CrusaderKingsIIITitleImage,
-      overlayImageHeight: 119,
-      overlayPositionFromRight: -1,
-      titleImageHeight: 75,
-      price: 49.99,
-    },
-    {
       id: "7a6ce9e9-9c70-49e9-ada9-217d9946326d",
+      title: "civilization VI",
       backgroundImageSrc: CivilizationVIBackgroundImage,
       overlayImageSrc: CivilizationVIOverlayImage,
       titleImageSrc: CivilizationVITitleImage,
@@ -181,7 +180,19 @@ export const slidersData: any = {
       price: 59.99,
     },
     {
+      id: "f06a5ecf-dd57-4dea-b9fb-9b101b0fb7a7",
+      title: "crusader kings III",
+      backgroundImageSrc: CrusaderKingsIIIBackgroundImage,
+      overlayImageSrc: CrusaderKingsIIIOverlayImage,
+      titleImageSrc: CrusaderKingsIIITitleImage,
+      overlayImageHeight: 119,
+      overlayPositionFromRight: -1,
+      titleImageHeight: 75,
+      price: 49.99,
+    },
+    {
       id: "98d5926e-6c7d-4561-b802-f400f0a48ce3",
+      title: "star craft II",
       backgroundImageSrc: StarCraftIIBackgroundImage,
       overlayImageSrc: StarCraftIIOverlayImage,
       titleImageSrc: StarCraftIITitleImage,
@@ -192,6 +203,7 @@ export const slidersData: any = {
     },
     {
       id: "e93e0666-02b6-4f1f-bf8c-fa0a8a5bcf4c",
+      title: "XCOM 2",
       backgroundImageSrc: XCOM2BackgroundImage,
       overlayImageSrc: XCOM2OverlayImage,
       titleImageSrc: XCOM2TitleImage,
@@ -203,17 +215,8 @@ export const slidersData: any = {
   ],
   mystery: [
     {
-      id: "81d31e99-dd99-4ec1-8eed-d3991e7eee0c",
-      backgroundImageSrc: TheWolfAmongUsBackgroundImage,
-      overlayImageSrc: TheWolfAmongUsOverlayImage,
-      titleImageSrc: TheWolfAmongUsTitleImage,
-      overlayImageHeight: 117,
-      overlayPositionFromRight: -2,
-      titleImageHeight: 75,
-      price: 14.99,
-    },
-    {
       id: "f94e98fd-2fe8-4454-94b1-770ef0c717ff",
+      title: "disco elysium",
       backgroundImageSrc: DiscoElysiumBackgroundImage,
       overlayImageSrc: DiscoElysiumOverlayImage,
       titleImageSrc: DiscoElysiumTitleImage,
@@ -223,7 +226,19 @@ export const slidersData: any = {
       price: 39.99,
     },
     {
+      id: "81d31e99-dd99-4ec1-8eed-d3991e7eee0c",
+      title: "the wolf among us",
+      backgroundImageSrc: TheWolfAmongUsBackgroundImage,
+      overlayImageSrc: TheWolfAmongUsOverlayImage,
+      titleImageSrc: TheWolfAmongUsTitleImage,
+      overlayImageHeight: 117,
+      overlayPositionFromRight: -2,
+      titleImageHeight: 75,
+      price: 14.99,
+    },
+    {
       id: "c44fb7a2-a59c-4690-8661-866aa5d7cfe5",
+      title: "the sinking city",
       backgroundImageSrc: TheSinkingCityBackgroundImage,
       overlayImageSrc: TheSinkingCityOverlayImage,
       titleImageSrc: TheSinkingCityTitleImage,
@@ -236,6 +251,7 @@ export const slidersData: any = {
   sports: [
     {
       id: "4d4b0cd6-a404-4beb-8e6e-b00eca2e0384",
+      title: "riders republic",
       backgroundImageSrc: RidersRepublicBackgroundImage,
       overlayImageSrc: RidersRepublicOverlayImage,
       titleImageSrc: RidersRepublicTitleImage,
@@ -246,6 +262,7 @@ export const slidersData: any = {
     },
     {
       id: "1568d58a-8529-488f-9527-d0955261c057",
+      title: "tekken 7",
       backgroundImageSrc: Tekken7BackgroundImage,
       overlayImageSrc: Tekken7OverlayImage,
       titleImageSrc: Tekken7TitleImage,
@@ -256,6 +273,7 @@ export const slidersData: any = {
     },
     {
       id: "f9678f25-b8f7-4672-9010-3bbd547466b8",
+      title: "fifa 22",
       backgroundImageSrc: Fifa22BackgroundImage,
       overlayImageSrc: Fifa22OverlayImage,
       titleImageSrc: Fifa22TitleImage,
@@ -266,6 +284,7 @@ export const slidersData: any = {
     },
     {
       id: "d9c5af61-495d-40f3-8512-4bea9a0634e2",
+      title: "super mega baseball 3",
       backgroundImageSrc: SuperMegaBaseball3BackgroundImage,
       overlayImageSrc: SuperMegaBaseball3OverlayImage,
       titleImageSrc: SuperMegaBaseball3TitleImage,
@@ -277,17 +296,8 @@ export const slidersData: any = {
   ],
   "hack_&_slash": [
     {
-      id: "ae6dfa49-9680-42cb-a2dd-3e787af394a0",
-      backgroundImageSrc: NierAutomataBackgroundImage,
-      overlayImageSrc: NierAutomataOverlayImage,
-      titleImageSrc: NierAutomataTitleImage,
-      overlayImageHeight: 116,
-      overlayPositionFromRight: 6,
-      titleImageHeight: 60,
-      price: 18.7,
-    },
-    {
       id: "bc55722e-4c4e-4e37-90cf-323d563707f7",
+      title: "sekiro shadows die twice",
       backgroundImageSrc: SekiroShadowsDieTwiceBackgroundImage,
       overlayImageSrc: SekiroShadowsDieTwiceOverlayImage,
       titleImageSrc: SekiroShadowsDieTwiceTitleImage,
@@ -297,7 +307,19 @@ export const slidersData: any = {
       price: 59.99,
     },
     {
+      id: "ae6dfa49-9680-42cb-a2dd-3e787af394a0",
+      title: "nier automata",
+      backgroundImageSrc: NierAutomataBackgroundImage,
+      overlayImageSrc: NierAutomataOverlayImage,
+      titleImageSrc: NierAutomataTitleImage,
+      overlayImageHeight: 116,
+      overlayPositionFromRight: 6,
+      titleImageHeight: 60,
+      price: 18.7,
+    },
+    {
       id: "acae4f7c-815c-4233-a709-37b76e439134",
+      title: "god of war",
       backgroundImageSrc: GodOfWarBackgroundImage,
       overlayImageSrc: GodOfWarOverlayImage,
       titleImageSrc: GodOfWarTitleImage,
@@ -308,6 +330,7 @@ export const slidersData: any = {
     },
     {
       id: "ab518692-ac6f-435d-ad33-f250f1aef023",
+      title: "metal gear rising revengeance",
       backgroundImageSrc: MetalGearRisingRevengeanceBackgroundImage,
       overlayImageSrc: MetalGearRisingRevengeanceOverlayImage,
       titleImageSrc: MetalGearRisingRevengeanceTitleImage,

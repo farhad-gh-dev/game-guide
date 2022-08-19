@@ -54,7 +54,7 @@ export const LeftPanel = styled.div`
   }
 `;
 
-export const RightPanel = styled.div`
+export const RightPanel = styled.aside`
   width: 100%;
   margin-bottom: 45px;
   height: 100%;

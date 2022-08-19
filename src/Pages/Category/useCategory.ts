@@ -45,7 +45,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     setTimeout(() => {
       dispatch(setLoadingStatus(false));
     }, 1000);
-  }, [targetCategory, dispatch]);
+  }, [slidersData, targetCategory, navigate, dispatch]);
 
   return {
     isLoading,
