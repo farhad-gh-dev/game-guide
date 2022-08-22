@@ -6,17 +6,17 @@ afterEach(cleanup);
 
 const dummyData = [
   {
-    id: 0,
+    id: "cat-0",
     title: "All Games",
     showInSmallScreen: false,
   },
   {
-    id: 1,
+    id: "cat-1",
     title: "Mystery",
     showInSmallScreen: true,
   },
   {
-    id: 2,
+    id: "cat-2",
     title: "Action",
     active: true,
   },

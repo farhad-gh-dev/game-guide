@@ -10,7 +10,7 @@ import { SearchBar, Button, CustomIcon } from "game-guide-ui-kit";
 import { Link } from "react-router-dom";
 
 export type CategoryItem = {
-  id?: number;
+  id?: string;
   title?: string;
   showInSmallScreen?: boolean;
 };
