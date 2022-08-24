@@ -40,7 +40,7 @@ export const LoadingContainer = styled.div`
   }
 `;
 
-export const LeftPanel = styled.div`
+export const LeftPanel = styled.main`
   width: 100%;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {

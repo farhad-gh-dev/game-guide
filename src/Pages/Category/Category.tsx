@@ -1,6 +1,8 @@
 import React from "react";
 import { useCategory } from "./useCategory";
 import { useUserInfo } from "../../Hooks/useUserInfo";
+import DocumentTitle from "react-document-title";
+import helpers from "../../Helpers";
 import {
   StyledCategoryPage,
   PageContentContainer,
@@ -37,15 +39,19 @@ const CategoryPage: React.FC = () => {
     collectionItems,
   } = useCategory(userShoppingCartItems);
 
-  return (
-    <StyledCategoryPage>
-      <TopBar
-        profileData={userProfileInfo}
-        numberOfNotifications={userNotifications?.length}
-        numberOfShoppingCartItems={userShoppingCartItems?.length}
-      />
+  const pageTitle = `Game Guide Store | ${helpers.string.capitalize(
+    targetCategory
+  )} Category`;
 
-      <main>
+  return (
+    <DocumentTitle title={pageTitle}>
+      <StyledCategoryPage>
+        <TopBar
+          profileData={userProfileInfo}
+          numberOfNotifications={userNotifications?.length}
+          numberOfShoppingCartItems={userShoppingCartItems?.length}
+        />
+
         <CategoriesPanel
           categoriesData={categoryItems}
           activeCategoryTitle={targetCategory}
@@ -92,10 +98,10 @@ const CategoryPage: React.FC = () => {
             </AllOffersButtonContainer>
           </RightPanel>
         </PageContentContainer>
-      </main>
 
-      <Footer />
-    </StyledCategoryPage>
+        <Footer />
+      </StyledCategoryPage>
+    </DocumentTitle>
   );
 };
 

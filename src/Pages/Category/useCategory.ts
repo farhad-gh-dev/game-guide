@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
 import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
-import { replaceSpaceWithUnderscore } from "../../Helpers/string";
+import helpers from "../../Helpers";
 
 export const useCategory = (userShoppingCartItems?: string[]) => {
   const dispatch = useAppDispatch();
@@ -18,7 +18,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   const targetCategory = urlParams.category?.toLowerCase();
 
   const targetSliderItems =
-    slidersData[replaceSpaceWithUnderscore(activeCategory)];
+    slidersData[helpers.string.replaceSpaceWithUnderscore(activeCategory)];
 
   const formattedOfferItems = offerItems?.map((item) => {
     return {
@@ -37,7 +37,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   useEffect(() => {
     //Check if category is valid
     !Object.keys(slidersData).includes(
-      replaceSpaceWithUnderscore(targetCategory)
+      helpers.string.replaceSpaceWithUnderscore(targetCategory)
     ) && navigate("/404");
 
     dispatch(setLoadingStatus(true));

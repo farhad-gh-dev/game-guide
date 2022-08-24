@@ -1,13 +1,9 @@
-import { formatPrice } from "./number";
-import {
-  replaceSpaceWithUnderscore,
-  replaceUnderscoreWithSpace,
-} from "./string";
+import * as number from "./number";
+import * as string from "./string";
 
 const helpers = {
-  formatPrice,
-  replaceSpaceWithUnderscore,
-  replaceUnderscoreWithSpace,
+  number,
+  string,
 };
 
 export default helpers;

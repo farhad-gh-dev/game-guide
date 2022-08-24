@@ -44,7 +44,7 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({
           <span>$</span>
         </div>
         <Text isSpan size="sm">
-          {helpers.formatPrice(profileData?.credit)}
+          {helpers.number.formatPrice(profileData?.credit)}
         </Text>
       </HoldingContainer>
 
