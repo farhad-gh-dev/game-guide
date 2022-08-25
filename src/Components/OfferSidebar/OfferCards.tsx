@@ -1,22 +1,22 @@
 import React from "react";
 import {
-  StyledOfferSidebar,
+  StyledOfferCards,
   TitleArea,
   OfferCardContainer,
-} from "./OfferSidebar.styled";
+} from "./OfferCards.styled";
 import { Heading, OfferCard, offerItem } from "game-guide-ui-kit";
 
-export type OfferSidebarProps = {
+export type OfferCardsProps = {
   offerItems?: offerItem[];
   onToggleInCart?: (id?: string) => void;
 };
 
-const OfferSidebar: React.FC<OfferSidebarProps> = ({
+const OfferCards: React.FC<OfferCardsProps> = ({
   offerItems = [],
   onToggleInCart = () => {},
 }) => {
   return (
-    <StyledOfferSidebar>
+    <StyledOfferCards>
       <TitleArea>
         <Heading h2>Special Offer</Heading>
       </TitleArea>
@@ -34,8 +34,8 @@ const OfferSidebar: React.FC<OfferSidebarProps> = ({
           );
         })}
       </OfferCardContainer>
-    </StyledOfferSidebar>
+    </StyledOfferCards>
   );
 };
 
-export default OfferSidebar;
+export default OfferCards;

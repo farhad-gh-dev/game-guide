@@ -7,15 +7,15 @@ import {
   StyledCategoryPage,
   PageContentContainer,
   LoadingContainer,
-  LeftPanel,
-  RightPanel,
+  MainContent,
+  Sidebar,
   AllOffersButtonContainer,
 } from "./CategoryPage.styled";
 import {
   TopBar,
   CategoriesPanel,
   ItemSlider,
-  OfferSidebar,
+  OfferCards,
   TabsPanel,
   Footer,
 } from "../../Components";
@@ -59,7 +59,7 @@ const CategoryPage: React.FC = () => {
         />
 
         <PageContentContainer>
-          <LeftPanel>
+          <MainContent>
             {!activeCategory || isLoading ? (
               <LoadingContainer>
                 <Loading />
@@ -74,10 +74,10 @@ const CategoryPage: React.FC = () => {
                 <TabsPanel tabsData={collectionItems} />
               </>
             )}
-          </LeftPanel>
+          </MainContent>
 
-          <RightPanel>
-            <OfferSidebar
+          <Sidebar>
+            <OfferCards
               offerItems={offerItems}
               onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
             />
@@ -96,7 +96,7 @@ const CategoryPage: React.FC = () => {
                 </div>
               </Button>
             </AllOffersButtonContainer>
-          </RightPanel>
+          </Sidebar>
         </PageContentContainer>
 
         <Footer />

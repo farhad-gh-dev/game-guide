@@ -40,7 +40,7 @@ export const LoadingContainer = styled.div`
   }
 `;
 
-export const LeftPanel = styled.main`
+export const MainContent = styled.main`
   width: 100%;
 
   @media (min-width: ${styles.breakpoint.laptopScreen}px) {
@@ -54,7 +54,7 @@ export const LeftPanel = styled.main`
   }
 `;
 
-export const RightPanel = styled.aside`
+export const Sidebar = styled.aside`
   width: 100%;
   margin-bottom: 45px;
   height: 100%;

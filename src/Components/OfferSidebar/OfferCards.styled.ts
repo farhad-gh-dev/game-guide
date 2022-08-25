@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { styles } from "game-guide-ui-kit";
 
-export const StyledOfferSidebar = styled.div`
+export const StyledOfferCards = styled.div`
   margin-bottom: 40px;
 
   @media (min-width: ${styles.breakpoint.largeScreen}px) {
