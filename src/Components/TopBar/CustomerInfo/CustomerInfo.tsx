@@ -18,7 +18,10 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({
   return (
     <StyledCustomerInfo>
       <IconsContainer>
-        <button onClick={() => console.log("clicked on shopping-cart")}>
+        <button
+          aria-label="shopping cart"
+          onClick={() => console.log("clicked on shopping-cart")}
+        >
           <CustomIcon
             type="shopping-card"
             height="15px"
@@ -28,7 +31,10 @@ const CustomerInfo: React.FC<CustomerInfoProps> = ({
           />
         </button>
 
-        <button onClick={() => console.log("clicked on notifications")}>
+        <button
+          aria-label="notifications"
+          onClick={() => console.log("clicked on notifications")}
+        >
           <CustomIcon
             type="bell"
             height="15px"

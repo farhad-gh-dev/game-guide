@@ -49,7 +49,6 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
                   variant={
                     activeCategoryTitle === i.title ? "primary" : "default"
                   }
-                  title={i.title}
                 >
                   {i.title}
                 </Button>
