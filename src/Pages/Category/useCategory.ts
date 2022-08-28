@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
 import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
 import helpers from "../../Helpers";
@@ -13,7 +13,6 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   const offerItems = useAppSelector((store) => store.app.offerItems);
   const collectionItems = useAppSelector((store) => store.app.collectionItems);
 
-  const navigate = useNavigate();
   const urlParams = useParams();
   const targetCategory = urlParams.category?.toLowerCase();
   const categoryIsNotValid = !Object.keys(slidersData).includes(
@@ -43,7 +42,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     setTimeout(() => {
       dispatch(setLoadingStatus(false));
     }, 1000);
-  }, [slidersData, targetCategory, navigate, dispatch]);
+  }, [slidersData, targetCategory, dispatch]);
 
   return {
     isLoading,
