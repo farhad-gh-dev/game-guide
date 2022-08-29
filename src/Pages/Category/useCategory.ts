@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
 import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
 import helpers from "../../Helpers";
 
 export const useCategory = (userShoppingCartItems?: string[]) => {
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+
   const dispatch = useAppDispatch();
   const slidersData = useAppSelector((store) => store.app.slidersData);
   const activeCategory = useAppSelector((store) => store.app.activeCategory);
@@ -37,20 +39,29 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   });
 
   useEffect(() => {
-    dispatch(setLoadingStatus(true));
-    dispatch(setActiveCategory(targetCategory));
-    setTimeout(() => {
-      dispatch(setLoadingStatus(false));
-    }, 1000);
+    if (isFirstLoad) {
+      dispatch(setActiveCategory(targetCategory));
+      setIsFirstLoad(false);
+    } else {
+      dispatch(setLoadingStatus(true));
+      dispatch(setActiveCategory(targetCategory));
+      const timeoutId = setTimeout(() => {
+        dispatch(setLoadingStatus(false));
+      }, 1000);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+    // eslint-disable-next-line
   }, [slidersData, targetCategory, dispatch]);
 
   return {
     isLoading,
-    categoryItems,
-    targetCategory,
     categoryIsNotValid,
+    allCategories: categoryItems,
     activeCategory,
-    targetSliderItems: formattedTargetSliderItems,
+    categorySliderItems: formattedTargetSliderItems,
     offerItems: formattedOfferItems,
     collectionItems,
   };

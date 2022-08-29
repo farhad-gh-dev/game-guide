@@ -32,20 +32,19 @@ const CategoryPage: React.FC = () => {
 
   const {
     isLoading,
-    categoryItems,
-    targetCategory,
     categoryIsNotValid,
+    allCategories,
     activeCategory,
-    targetSliderItems,
+    categorySliderItems,
     offerItems,
     collectionItems,
   } = useCategory(userShoppingCartItems);
 
-  const pageTitle = `Game Guide Store | ${helpers.string.capitalize(
-    targetCategory
-  )} Category`;
-
   if (categoryIsNotValid) return <Navigate to="/404" />;
+
+  const pageTitle = `Game Guide Store | ${helpers.string.capitalize(
+    activeCategory
+  )} Category`;
 
   return (
     <StyledCategoryPage>
@@ -59,8 +58,8 @@ const CategoryPage: React.FC = () => {
       />
 
       <CategoriesPanel
-        categoriesData={categoryItems}
-        activeCategoryTitle={targetCategory}
+        categoriesData={allCategories}
+        activeCategoryTitle={activeCategory}
         onSearch={(searchTerm) => console.log(searchTerm)}
       />
 
@@ -73,7 +72,7 @@ const CategoryPage: React.FC = () => {
           ) : (
             <>
               <ItemSlider
-                sliderItems={targetSliderItems}
+                sliderItems={categorySliderItems}
                 activeCategory={activeCategory}
                 onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
               />
