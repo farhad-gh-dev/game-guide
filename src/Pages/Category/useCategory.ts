@@ -54,7 +54,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
       };
     }
     // eslint-disable-next-line
-  }, [slidersData, targetCategory, dispatch]);
+  }, [targetCategory, dispatch]);
 
   return {
     isLoading,
