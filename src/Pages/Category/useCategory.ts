@@ -41,6 +41,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
 
   useEffect(() => {
     if (isInitialMount.current) {
+      dispatch(setActiveCategory(targetCategory));
       isInitialMount.current = false;
       console.log("ran");
     } else {
