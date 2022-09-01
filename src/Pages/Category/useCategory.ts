@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
 import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
 import helpers from "../../Helpers";
 
 export const useCategory = (userShoppingCartItems?: string[]) => {
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
+  // const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const isInitialMount = useRef(true);
 
   const dispatch = useAppDispatch();
   const slidersData = useAppSelector((store) => store.app.slidersData);
@@ -39,10 +40,11 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   });
 
   useEffect(() => {
-    if (isFirstLoad) {
-      dispatch(setActiveCategory(targetCategory));
-      setIsFirstLoad(false);
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      console.log("ran");
     } else {
+      console.log("running...");
       dispatch(setLoadingStatus(true));
       dispatch(setActiveCategory(targetCategory));
       const timeoutId = setTimeout(() => {
@@ -53,8 +55,17 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
         clearTimeout(timeoutId);
       };
     }
-    // eslint-disable-next-line
   }, [targetCategory, dispatch]);
+
+  // useEffect(() => {
+  //   if (isFirstLoad) {
+  //     dispatch(setActiveCategory(targetCategory));
+  //     setIsFirstLoad(false);
+  //   } else {
+  //
+  //   }
+  //   // eslint-disable-next-line
+  // }, [targetCategory, dispatch]);
 
   return {
     isLoading,
