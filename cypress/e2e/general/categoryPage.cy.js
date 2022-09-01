@@ -15,15 +15,32 @@ describe("category page", () => {
     );
   });
 
+  it("Check slider auto play", () => {
+    cy.wait(4000);
+    cy.get('[data-testid="slide-1"]').should("not.be.visible");
+    cy.get('[data-testid="slide-2"]').should("be.visible");
+  });
+
+  it("Change active slide", () => {
+    cy.get('.slider-control-container [data-testid="indicator-4"]')
+      .last()
+      .click();
+    cy.get('[data-testid="slide-4"]').should("be.visible");
+  });
+
   it("Add and remove slider item to shopping cart", () => {
+    const targetSliderItemAddToCartButton = cy.get(
+      '[data-testid="slide-1"] button'
+    );
+
     // Add to cart
-    cy.get('[data-testid="slide-1"] button').click();
+    targetSliderItemAddToCartButton.click();
     cy.get('button[aria-label="shopping cart"] span')
       .should("be.visible")
       .contains("1");
 
     // Remove from cart
-    cy.get('[data-testid="slide-1"] button').click();
+    targetSliderItemAddToCartButton.click();
     cy.get('button[aria-label="shopping cart"] span').should("not.exist");
   });
 
