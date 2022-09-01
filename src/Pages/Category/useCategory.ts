@@ -5,7 +5,6 @@ import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
 import helpers from "../../Helpers";
 
 export const useCategory = (userShoppingCartItems?: string[]) => {
-  // const [isFirstLoad, setIsFirstLoad] = useState(true);
   const isInitialMount = useRef(true);
 
   const dispatch = useAppDispatch();
@@ -43,9 +42,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     if (isInitialMount.current) {
       dispatch(setActiveCategory(targetCategory));
       isInitialMount.current = false;
-      console.log("ran");
     } else {
-      console.log("running...");
       dispatch(setLoadingStatus(true));
       dispatch(setActiveCategory(targetCategory));
       const timeoutId = setTimeout(() => {
@@ -57,16 +54,6 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
       };
     }
   }, [targetCategory, dispatch]);
-
-  // useEffect(() => {
-  //   if (isFirstLoad) {
-  //     dispatch(setActiveCategory(targetCategory));
-  //     setIsFirstLoad(false);
-  //   } else {
-  //
-  //   }
-  //   // eslint-disable-next-line
-  // }, [targetCategory, dispatch]);
 
   return {
     isLoading,
