@@ -31,7 +31,7 @@ export const useSlider = (numberOfItems: number, duration: number) => {
   useEffect(() => {
     const sliderTimer = setTimeout(() => {
       if (activeSlideNumber < numberOfItems) {
-        setActiveSlideNumber(activeSlideNumber + 1);
+        setActiveSlideNumber((prevState) => prevState + 1);
       } else if (activeSlideNumber === numberOfItems) {
         setActiveSlideNumber(1);
       }
