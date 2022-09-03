@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { type SliderItem } from "game-guide-ui-kit";
+import { type SliderItemType } from "game-guide-ui-kit";
 import dummyData, {
   type categoryItemsType,
   type categoryTabsType,
@@ -16,7 +16,7 @@ export interface AppState {
   offerItems?: offerItemsType;
   collectionItems?: categoryTabsType;
   activeCategory?: string | undefined;
-  sliderItems?: SliderItem[];
+  sliderItems?: SliderItemType[];
   shoppingCartItems: any[];
   notifications?: any[];
 }

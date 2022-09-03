@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { StyledItemSlider, SliderContainer } from "./ItemSlider.styled";
-import { Slider, type SliderItem, SliderControl } from "game-guide-ui-kit";
+import { Slider, type SliderItemType, SliderControl } from "game-guide-ui-kit";
 import { useSlider } from "./useSlider";
 
 export type ItemSliderProps = {
-  sliderItems: SliderItem[];
+  sliderItems: SliderItemType[];
   activeCategory?: string;
   onToggleInCart?: (id?: string) => void;
 };
