@@ -1,26 +1,38 @@
-import { render, screen, cleanup, waitFor } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./Store";
 import { GlobalStyle } from "game-guide-ui-kit";
 import App from "./App";
-import { Suspense } from "react";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
 
-afterEach(cleanup);
+let container: any = null;
+beforeEach(() => {
+  // setup a DOM element as a render target
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
 
-test("renders learn react link", async () => {
-  render(
-    <Suspense>
+afterEach(() => {
+  // cleanup on exiting
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
+test("renders learn react link", () => {
+  // eslint-disable-next-line testing-library/no-unnecessary-act
+  act(() => {
+    render(
       <Provider store={store}>
         <BrowserRouter>
           <GlobalStyle />
           <App />
         </BrowserRouter>
-      </Provider>
-    </Suspense>
-  );
-
-  await waitFor(() => {
-    expect(screen.getByText("Special Offer")).toBeInTheDocument();
+      </Provider>,
+      container
+    );
   });
+  expect(screen.getByText("loading...")).toBeInTheDocument();
 });
