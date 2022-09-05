@@ -47,4 +47,4 @@ const TabsPanel: React.FC<TabsPanelProps> = ({ tabsData }) => {
   );
 };
 
-export default TabsPanel;
+export default React.memo(TabsPanel);

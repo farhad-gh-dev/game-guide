@@ -38,4 +38,4 @@ const OfferCards: React.FC<OfferCardsProps> = ({
   );
 };
 
-export default OfferCards;
+export default React.memo(OfferCards);

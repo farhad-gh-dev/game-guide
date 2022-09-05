@@ -51,4 +51,4 @@ const ItemSlider: React.FC<ItemSliderProps> = ({
   );
 };
 
-export default ItemSlider;
+export default React.memo(ItemSlider);

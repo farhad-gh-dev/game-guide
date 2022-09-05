@@ -65,4 +65,4 @@ const CategoriesPanel: React.FC<CategoriesPanelProps> = ({
   );
 };
 
-export default CategoriesPanel;
+export default React.memo(CategoriesPanel);

@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "./store";
 import { toggleItemInShoppingCart } from "../Store/appSlice";
+import { useCallback } from "react";
 
 export const useUserInfo = () => {
   const dispatch = useAppDispatch();
@@ -9,9 +10,12 @@ export const useUserInfo = () => {
     (store) => store.app.shoppingCartItems
   );
 
-  const handleToggleItemInShoppingCart = (id?: string) => {
-    dispatch(toggleItemInShoppingCart(id));
-  };
+  const handleToggleItemInShoppingCart = useCallback(
+    (id?: string) => {
+      dispatch(toggleItemInShoppingCart(id));
+    },
+    [dispatch]
+  );
 
   return {
     userProfileInfo,

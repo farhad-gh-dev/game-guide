@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useCategory } from "./useCategory";
 import { useUserInfo } from "../../Hooks/useUserInfo";
 import { Helmet } from "react-helmet";
@@ -40,6 +40,11 @@ const CategoryPage: React.FC = () => {
     collectionItems,
   } = useCategory(userShoppingCartItems);
 
+  const handleSearch = useCallback(
+    (searchTerm: string) => console.log(searchTerm),
+    []
+  );
+
   if (categoryIsNotValid) return <Navigate to="/404" />;
 
   const pageTitle = `Game Guide Store | ${helpers.string.capitalize(
@@ -60,7 +65,7 @@ const CategoryPage: React.FC = () => {
       <CategoriesPanel
         categoriesData={allCategories}
         activeCategoryTitle={activeCategory}
-        onSearch={(searchTerm) => console.log(searchTerm)}
+        onSearch={handleSearch}
       />
 
       <PageContentContainer>
@@ -74,7 +79,7 @@ const CategoryPage: React.FC = () => {
               <ItemSlider
                 sliderItems={categorySliderItems}
                 activeCategory={activeCategory}
-                onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
+                onToggleInCart={handleToggleItemInShoppingCart}
               />
               <TabsPanel tabsData={collectionItems} />
             </>
@@ -84,7 +89,7 @@ const CategoryPage: React.FC = () => {
         <Sidebar>
           <OfferCards
             offerItems={offerItems}
-            onToggleInCart={(id) => handleToggleItemInShoppingCart(id)}
+            onToggleInCart={handleToggleItemInShoppingCart}
           />
 
           <AllOffersButtonContainer>

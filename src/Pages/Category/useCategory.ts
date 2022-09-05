@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
 import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
@@ -24,19 +24,23 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
   const targetSliderItems =
     slidersData[helpers.string.replaceSpaceWithUnderscore(activeCategory)];
 
-  const formattedOfferItems = offerItems?.map((item) => {
-    return {
-      ...item,
-      isInBasket: userShoppingCartItems?.includes(item.id),
-    };
-  });
+  const formattedOfferItems = useMemo(() => {
+    return offerItems?.map((item) => {
+      return {
+        ...item,
+        isInBasket: userShoppingCartItems?.includes(item.id),
+      };
+    });
+  }, [offerItems, userShoppingCartItems]);
 
-  const formattedTargetSliderItems = targetSliderItems?.map((item: any) => {
-    return {
-      ...item,
-      isInBasket: userShoppingCartItems?.includes(item.id),
-    };
-  });
+  const formattedTargetSliderItems = useMemo(() => {
+    return targetSliderItems?.map((item: any) => {
+      return {
+        ...item,
+        isInBasket: userShoppingCartItems?.includes(item.id),
+      };
+    });
+  }, [targetSliderItems, userShoppingCartItems]);
 
   useEffect(() => {
     if (isInitialMount.current) {

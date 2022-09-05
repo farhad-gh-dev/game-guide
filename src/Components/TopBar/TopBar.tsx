@@ -26,12 +26,16 @@ const TopBar: React.FC<TopBarProps> = ({
   numberOfNotifications,
   numberOfShoppingCartItems,
 }) => {
+  const MemoizedBrandLogo = React.memo(() => {
+    return <BrandLogo />;
+  });
+
   return (
     <StyledTopBar>
       <TopBarBackground />
       <DesktopContainer>
         <a href="/">
-          <BrandLogo />
+          <MemoizedBrandLogo />
         </a>
 
         <nav>
@@ -55,7 +59,7 @@ const TopBar: React.FC<TopBarProps> = ({
   );
 };
 
-const NavbarContent = () => {
+const NavbarContent = React.memo(() => {
   return (
     <Navbar>
       <NavbarItem active={false}>
@@ -72,6 +76,6 @@ const NavbarContent = () => {
       </NavbarItem>
     </Navbar>
   );
-};
+});
 
-export default TopBar;
+export default React.memo(TopBar);
