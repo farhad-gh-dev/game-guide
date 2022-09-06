@@ -33,15 +33,6 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     });
   }, [offerItems, userShoppingCartItems]);
 
-  const formattedTargetSliderItems = useMemo(() => {
-    return targetSliderItems?.map((item: any) => {
-      return {
-        ...item,
-        isInBasket: userShoppingCartItems?.includes(item.id),
-      };
-    });
-  }, [targetSliderItems, userShoppingCartItems]);
-
   useEffect(() => {
     if (isInitialMount.current) {
       dispatch(setActiveCategory(targetCategory));
@@ -64,7 +55,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     categoryIsNotValid,
     allCategories: categoryItems,
     activeCategory,
-    categorySliderItems: formattedTargetSliderItems,
+    categorySliderItems: targetSliderItems,
     offerItems: formattedOfferItems,
     collectionItems,
   };

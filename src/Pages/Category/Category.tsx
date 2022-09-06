@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useCategory } from "./useCategory";
 import { useUserInfo } from "../../Hooks/useUserInfo";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import helpers from "../../Helpers";
 import {
   StyledCategoryPage,
@@ -53,7 +53,7 @@ const CategoryPage: React.FC = () => {
 
   return (
     <StyledCategoryPage>
-      <Helmet>
+      <Helmet prioritizeSeoTags>
         <title>{pageTitle}</title>
       </Helmet>
       <TopBar
@@ -78,6 +78,7 @@ const CategoryPage: React.FC = () => {
             <>
               <ItemSlider
                 sliderItems={categorySliderItems}
+                shoppingCartItems={userShoppingCartItems}
                 activeCategory={activeCategory}
                 onToggleInCart={handleToggleItemInShoppingCart}
               />

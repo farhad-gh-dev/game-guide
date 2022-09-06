@@ -1,6 +1,6 @@
 import React from "react";
 import BrandLogo from "../../Assets/logo-512-transparent-bg.png";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import {
   StyledNotFoundPage,
   LogoImage,

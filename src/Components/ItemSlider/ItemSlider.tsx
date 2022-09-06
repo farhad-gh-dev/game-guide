@@ -5,12 +5,14 @@ import { useSlider } from "./useSlider";
 
 export type ItemSliderProps = {
   sliderItems: SliderItemType[];
+  shoppingCartItems?: string[];
   activeCategory?: string;
   onToggleInCart?: (id?: string) => void;
 };
 
 const ItemSlider: React.FC<ItemSliderProps> = ({
   sliderItems,
+  shoppingCartItems,
   activeCategory,
   onToggleInCart = () => {},
 }) => {
@@ -32,6 +34,7 @@ const ItemSlider: React.FC<ItemSliderProps> = ({
         <Slider
           className="slider-panels"
           sliderItems={sliderItemsWithRNG}
+          basketItems={shoppingCartItems}
           activeSlide={activeSlideNumber}
           overlayImage3DOffsets={[
             overlayImage3DOffsets[0],
