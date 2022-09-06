@@ -15,11 +15,12 @@ const ItemSlider: React.FC<ItemSliderProps> = ({
   onToggleInCart = () => {},
 }) => {
   const {
+    sliderItemsWithRNG,
     activeSlideNumber,
     overlayImage3DOffsets,
     setActiveSlideNumber,
     handleOverlayImage3DEffect,
-  } = useSlider(sliderItems.length, 3.5);
+  } = useSlider(sliderItems, 3.5);
 
   useEffect(() => {
     setActiveSlideNumber(1);
@@ -30,7 +31,7 @@ const ItemSlider: React.FC<ItemSliderProps> = ({
       <SliderContainer onMouseMove={(e) => handleOverlayImage3DEffect(e)}>
         <Slider
           className="slider-panels"
-          sliderItems={sliderItems}
+          sliderItems={sliderItemsWithRNG}
           activeSlide={activeSlideNumber}
           overlayImage3DOffsets={[
             overlayImage3DOffsets[0],
@@ -42,7 +43,7 @@ const ItemSlider: React.FC<ItemSliderProps> = ({
 
       <div className="slider-control-container">
         <SliderControl
-          numberOfSlides={sliderItems.length}
+          numberOfSlides={sliderItemsWithRNG.length}
           activeSlide={activeSlideNumber}
           handleSlideChange={(index: number) => setActiveSlideNumber(index)}
         />

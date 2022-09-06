@@ -1,11 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { styles } from "game-guide-ui-kit";
+import { type SliderItemType } from "game-guide-ui-kit";
+import helpers from "../../Helpers";
 
-export const useSlider = (numberOfItems: number, duration: number) => {
+export const useSlider = (sliderItems: SliderItemType[], duration: number) => {
   const [activeSlideNumber, setActiveSlideNumber] = useState<number>(1);
   const [overlayImage3DOffsets, setOverlayImage3DOffset] = useState<number[]>([
     0, 0,
   ]);
+
+  const sliderItemsWithRNG = useMemo(() => {
+    return helpers.array.shuffleArrayElements(sliderItems);
+  }, [sliderItems]);
 
   const handleOverlayImage3DEffect = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -30,6 +36,7 @@ export const useSlider = (numberOfItems: number, duration: number) => {
 
   useEffect(() => {
     const sliderTimer = setTimeout(() => {
+      const numberOfItems = sliderItems.length;
       if (activeSlideNumber < numberOfItems) {
         setActiveSlideNumber((prevState) => prevState + 1);
       } else if (activeSlideNumber === numberOfItems) {
@@ -38,9 +45,10 @@ export const useSlider = (numberOfItems: number, duration: number) => {
     }, duration * 1000);
 
     return () => clearTimeout(sliderTimer);
-  }, [activeSlideNumber, numberOfItems, duration]);
+  }, [activeSlideNumber, sliderItems, duration]);
 
   return {
+    sliderItemsWithRNG,
     activeSlideNumber,
     overlayImage3DOffsets,
     setActiveSlideNumber,
