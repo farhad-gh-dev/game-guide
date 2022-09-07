@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
 import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
 import helpers from "../../Helpers";
 
-export const useCategory = (userShoppingCartItems?: string[]) => {
+export const useCategory = () => {
   const isInitialMount = useRef(true);
 
   const dispatch = useAppDispatch();
@@ -23,15 +23,6 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
 
   const targetSliderItems =
     slidersData[helpers.string.replaceSpaceWithUnderscore(activeCategory)];
-
-  const formattedOfferItems = useMemo(() => {
-    return offerItems?.map((item) => {
-      return {
-        ...item,
-        isInBasket: userShoppingCartItems?.includes(item.id),
-      };
-    });
-  }, [offerItems, userShoppingCartItems]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -56,7 +47,7 @@ export const useCategory = (userShoppingCartItems?: string[]) => {
     allCategories: categoryItems,
     activeCategory,
     categorySliderItems: targetSliderItems,
-    offerItems: formattedOfferItems,
+    offerItems,
     collectionItems,
   };
 };

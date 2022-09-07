@@ -8,11 +8,13 @@ import { Heading, OfferCard, offerItem } from "game-guide-ui-kit";
 
 export type OfferCardsProps = {
   offerItems?: offerItem[];
+  shoppingCartItems?: string[];
   onToggleInCart?: (id?: string) => void;
 };
 
 const OfferCards: React.FC<OfferCardsProps> = ({
   offerItems = [],
+  shoppingCartItems,
   onToggleInCart = () => {},
 }) => {
   return (
@@ -27,6 +29,7 @@ const OfferCards: React.FC<OfferCardsProps> = ({
             <OfferCard
               key={item.id}
               itemData={item}
+              isInBasket={shoppingCartItems?.includes(`${item.id}`)}
               onToggleInCart={(itemData: offerItem) =>
                 onToggleInCart(itemData.id)
               }

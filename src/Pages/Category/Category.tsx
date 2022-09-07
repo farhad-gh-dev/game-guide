@@ -38,7 +38,7 @@ const CategoryPage: React.FC = () => {
     categorySliderItems,
     offerItems,
     collectionItems,
-  } = useCategory(userShoppingCartItems);
+  } = useCategory();
 
   const handleSearch = useCallback(
     (searchTerm: string) => console.log(searchTerm),
@@ -90,6 +90,7 @@ const CategoryPage: React.FC = () => {
         <Sidebar>
           <OfferCards
             offerItems={offerItems}
+            shoppingCartItems={userShoppingCartItems}
             onToggleInCart={handleToggleItemInShoppingCart}
           />
 
