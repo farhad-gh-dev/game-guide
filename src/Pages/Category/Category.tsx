@@ -8,18 +8,16 @@ import {
   PageContentContainer,
   LoadingContainer,
   MainContent,
-  Sidebar,
-  AllOffersButtonContainer,
 } from "./CategoryPage.styled";
 import {
   TopBar,
   CategoriesPanel,
   ItemSlider,
-  OfferCards,
   TabsPanel,
+  OfferSidebar,
   Footer,
 } from "../../Components";
-import { Loading, Button, CustomIcon } from "game-guide-ui-kit";
+import { Loading } from "game-guide-ui-kit";
 import { Navigate } from "react-router-dom";
 
 const CategoryPage: React.FC = () => {
@@ -87,28 +85,11 @@ const CategoryPage: React.FC = () => {
           )}
         </MainContent>
 
-        <Sidebar>
-          <OfferCards
-            offerItems={offerItems}
-            shoppingCartItems={userShoppingCartItems}
-            onToggleInCart={handleToggleItemInShoppingCart}
-          />
-
-          <AllOffersButtonContainer>
-            <Button variant="primary">
-              <div className="button-content">
-                See All
-                <CustomIcon
-                  className="play-icon"
-                  type="play"
-                  height="9px"
-                  heightLaptop="15px"
-                  heightDesktop="18px"
-                />
-              </div>
-            </Button>
-          </AllOffersButtonContainer>
-        </Sidebar>
+        <OfferSidebar
+          offerItems={offerItems}
+          shoppingCartItems={userShoppingCartItems}
+          onToggleItemInCart={handleToggleItemInShoppingCart}
+        />
       </PageContentContainer>
 
       <Footer />
