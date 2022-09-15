@@ -24,7 +24,7 @@ export const IconsContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  div {
+  button {
     margin-right: 12px;
 
     @media (min-width: ${styles.breakpoint.laptopScreen}px) {
