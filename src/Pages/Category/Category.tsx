@@ -32,6 +32,7 @@ const CategoryPage: React.FC = () => {
     isLoading,
     categoryIsNotValid,
     allCategories,
+    targetCategory,
     activeCategory,
     categorySliderItems,
     offerItems,
@@ -62,7 +63,7 @@ const CategoryPage: React.FC = () => {
 
       <CategoriesPanel
         categoriesData={allCategories}
-        activeCategoryTitle={activeCategory}
+        activeCategoryTitle={targetCategory}
         onSearch={handleSearch}
       />
 

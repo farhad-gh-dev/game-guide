@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
 import {
   setActiveCategory,
-  delayedSetActiveCategory,
   setLoadingStatus,
   getAppState,
 } from "../../Store/appSlice";
@@ -35,7 +34,15 @@ export const useCategory = () => {
       dispatch(setActiveCategory(targetCategory));
       isInitialMount.current = false;
     } else {
-      dispatch(delayedSetActiveCategory(targetCategory));
+      dispatch(setLoadingStatus(true));
+      dispatch(setActiveCategory(targetCategory));
+      const timeoutId = setTimeout(() => {
+        dispatch(setLoadingStatus(false));
+      }, 1000);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
     }
   }, [targetCategory, dispatch]);
 
@@ -43,6 +50,7 @@ export const useCategory = () => {
     isLoading,
     categoryIsNotValid,
     allCategories: categoryItems,
+    targetCategory,
     activeCategory,
     categorySliderItems: targetSliderItems,
     offerItems,
