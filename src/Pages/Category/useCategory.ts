@@ -1,19 +1,25 @@
 import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/store";
-import { setActiveCategory, setLoadingStatus } from "../../Store/appSlice";
+import {
+  setActiveCategory,
+  delayedSetActiveCategory,
+  setLoadingStatus,
+  getAppState,
+} from "../../Store/appSlice";
 import helpers from "../../Helpers";
 
 export const useCategory = () => {
-  const isInitialMount = useRef(true);
-
   const dispatch = useAppDispatch();
-  const slidersData = useAppSelector((store) => store.app.slidersData);
-  const activeCategory = useAppSelector((store) => store.app.activeCategory);
-  const isLoading = useAppSelector((store) => store.app.loading);
-  const categoryItems = useAppSelector((store) => store.app.categoryItems);
-  const offerItems = useAppSelector((store) => store.app.offerItems);
-  const collectionItems = useAppSelector((store) => store.app.collectionItems);
+  const {
+    slidersData,
+    activeCategory,
+    loading: isLoading,
+    categoryItems,
+    offerItems,
+    collectionItems,
+  } = useAppSelector(getAppState);
+  const isInitialMount = useRef(true);
 
   const urlParams = useParams();
   const targetCategory = urlParams.category?.toLowerCase();
@@ -29,15 +35,7 @@ export const useCategory = () => {
       dispatch(setActiveCategory(targetCategory));
       isInitialMount.current = false;
     } else {
-      dispatch(setLoadingStatus(true));
-      dispatch(setActiveCategory(targetCategory));
-      const timeoutId = setTimeout(() => {
-        dispatch(setLoadingStatus(false));
-      }, 1000);
-
-      return () => {
-        clearTimeout(timeoutId);
-      };
+      dispatch(delayedSetActiveCategory(targetCategory));
     }
   }, [targetCategory, dispatch]);
 

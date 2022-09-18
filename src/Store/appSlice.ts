@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { type SliderItemType } from "game-guide-ui-kit";
+import { type RootState } from "./index";
 import dummyData, {
   type categoryItemsType,
   type categoryTabsType,
@@ -34,6 +35,18 @@ const initialState: AppState = {
   notifications: [1, 2, 3, 4, 5, 6, 7],
 };
 
+export const delayedSetActiveCategory = createAsyncThunk(
+  "delayedActiveCategory",
+  async (targetCategory?: string) => {
+    const delayPromise = new Promise((res) =>
+      setTimeout(() => res(targetCategory), 1000)
+    );
+
+    const category = await delayPromise;
+    return category;
+  }
+);
+
 export const appSlice = createSlice({
   name: "app",
   initialState,
@@ -67,9 +80,23 @@ export const appSlice = createSlice({
       }
     },
   },
+
+  extraReducers: (builder) => {
+    builder.addCase(delayedSetActiveCategory.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(delayedSetActiveCategory.fulfilled, (state, action) => {
+      if (state.activeCategory !== action.payload) {
+        state.activeCategory = `${action.payload}`;
+      }
+      state.loading = false;
+    });
+  },
 });
 
 export const { setActiveCategory, setLoadingStatus, toggleItemInShoppingCart } =
   appSlice.actions;
+
+export const getAppState = (state: RootState) => state.app;
 
 export default appSlice.reducer;
