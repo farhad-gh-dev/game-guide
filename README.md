@@ -7,7 +7,7 @@ Live demo -> https://game-guide-app.vercel.app/
 
 ## Tech stack
 
-React JS, Typescript, Redux, React-Router, Styled Components, Cypress, Jest
+React JS, TypeScript, Redux, React-Router, Styled Components, Cypress, Jest
 
 ## Development and Build
 
